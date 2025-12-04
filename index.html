@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sanctuary Outdoor – 3D Render & Build Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO Domain -->
+  <link rel="canonical" href="https://SanctuaryOutdoor3DRenderandBuildCo.com/" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Sanctuary Outdoor 3D Render & Build Co. provides professional outdoor design, 3D rendering, construction, and full project completion services in Arizona." />
+  <meta name="keywords" content="Sanctuary Outdoor, outdoor living, backyard design, 3D render, pergola, landscape design, construction, Scottsdale, Arizona" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sanctuary Outdoor 3D Render & Build Co.",
+    "image": "https://SanctuaryOutdoor3DRenderandBuildCo.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10632 N Scottsdale Rd Suite 105",
+      "addressLocality": "Scottsdale",
+      "addressRegion": "AZ",
+      "postalCode": "85254"
+    },
+    "telephone": "(480) 915-0026",
+    "email": "Jim@SanctuaryOutdoor.com",
+    "url": "https://SanctuaryOutdoor3DRenderandBuildCo.com"
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(243, 244, 246, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-family: "Palatino Linotype", serif;
+      color: rgb(204, 0, 0);
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: #111827;
+    }
+
+    .btn-primary {
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: #111827;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    section {
+      margin-top: 3rem;
+    }
+
+    .hero {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 3vw + 1rem, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: #4b5563;
+      font-size: 1rem;
+      max-width: 35rem;
+    }
+
+    .hero-highlight {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #6b7280;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card {
+      background: #111827;
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background: radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.12), transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-card p {
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+    }
+
+    .chip {
+      border-radius: 999px;
+      border: 1px solid rgba(249, 250, 251, 0.2);
+      padding: 0.25rem 0.6rem;
+      background: rgba(17, 24, 39, 0.7);
+    }
+
+    h2.section-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #6b7280;
+      max-width: 32rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+
+    /* Investment tiers */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .pricing-tier-card {
+      background: white;
+      border-radius: 0.9rem;
+      padding: 0.9rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .pricing-tier-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 0.6rem;
+    }
+
+    /* Questionnaire */
+    .questionnaire {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.5rem 1.75rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+      max-width: 720px;
+    }
+
+    .question-step {
+      display: none;
+    }
+
+    .question-step.active {
+      display: block;
+    }
+
+    .question-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .question-help {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 0.8rem;
+    }
+
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .option-tile {
+      border-radius: 0.9rem;
+      border: 1px solid #d1d5db;
+      padding: 0.7rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      background: #f9fafb;
+    }
+
+    .option-tile.selected {
+      border-color: #111827;
+      background: #111827;
+      color: white;
+    }
+
+    .question-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary {
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: white;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 80px;
+    }
+
+    /* Gallery with line-screen overlay */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .image-frame {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #111827;
+      height: 200px;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.1);
+    }
+
+    /* Line-screen overlay */
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      opacity: 0.55;
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(243, 244, 246, 0.4) 0px,
+        rgba(243, 244, 246, 0.4) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    }
+
+    .gallery-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 0.6rem;
+    }
+
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .review-item {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 0.6rem;
+    }
+
+    .review-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .review-body {
+      font-size: 0.88rem;
+      color: #4b5563;
+      margin-top: 0.2rem;
+    }
+
+    .review-response {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-left: 2px solid #e5e7eb;
+      padding-left: 0.5rem;
+    }
+
+    .review-form .field {
+      margin-bottom: 0.7rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: inherit;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-link-button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: underline;
+      color: inherit;
+      font: inherit;
+    }
+
+    .about-details {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+      display: none;
+    }
+
+    .about-details.open {
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .reviews-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">SANCTUARY OUTDOOR</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Investment Tiers</a>
+        <a href="#questionnaire">Questionnaire</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <button class="btn-primary" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
+          Start Your Design Brief
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-highlight">3D render–first landscape design & build</div>
+        <h1>Custom outdoor sanctuaries with crystal-clear pricing before you commit.</h1>
+        <p>
+          We design and build tailored outdoor spaces using high-fidelity 3D renders so you can see
+          every line, light, and texture — and know the investment — before construction begins.
+        </p>
+        <div style="margin-top: 1.2rem;">
+          <button class="btn-primary" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
+            Start Your Design Questionnaire
+          </button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>How we work</h2>
+        <p>
+          Share what you love visually, not just with words. We’ll translate your preferences into
+          a custom 3D concept and a transparent build proposal.
+        </p>
+        <div class="chip-row">
+          <div class="chip">High-end residential</div>
+          <div class="chip">3D visualization</div>
+          <div class="chip">Design–build</div>
+          <div class="chip">Accurate pricing</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2 class="section-title">Typical Services</h2>
+      <p class="section-subtitle">
+        Every project is custom, but these are the core services most Sanctuary Outdoor clients rely on.
+      </p>
+      <div class="services-grid">
+        <div class="card">
+          <h3>3D Concept Design</h3>
+          <p>Photo-realistic 3D renders that let you walk your future outdoor space before any work begins.</p>
+        </div>
+        <div class="card">
+          <h3>Full Property Masterplans</h3>
+          <p>Comprehensive layouts for front, back, and side yards that evolve with your home over time.</p>
+        </div>
+        <div class="card">
+          <h3>Outdoor Living Spaces</h3>
+          <p>Outdoor kitchens, fire features, pools, spas, pergolas, and lounge areas designed as one cohesive experience.</p>
+        </div>
+        <div class="card">
+          <h3>Planting & Lighting Design</h3>
+          <p>Layered planting palettes and architectural lighting that feel luxurious day and night.</p>
+        </div>
+        <div class="card">
+          <h3>Design–Build Management</h3>
+          <p>We manage the build so your project stays aligned with the approved renderings and agreed-upon investment.</p>
+        </div>
+        <div class="card">
+          <h3>Phased Project Planning</h3>
+          <p>Staged implementation plans that match your timeline while preserving the integrity of the overall design.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTMENT TIERS -->
+    <section id="pricing">
+      <h2 class="section-title">Investment Tiers</h2>
+      <p class="section-subtitle">
+        These typical project tiers help us align the design and build scope with your comfort level.
+        Final proposals are always tailored to your specific property and priorities.
+      </p>
+      <div class="pricing-grid">
+        <div class="pricing-tier-card">$10,000</div>
+        <div class="pricing-tier-card">$20,000</div>
+        <div class="pricing-tier-card">$50,000</div>
+        <div class="pricing-tier-card">$100,000</div>
+        <div class="pricing-tier-card">$150,000+</div>
+      </div>
+      <div class="pricing-tier-note">
+        Many clients phase work across multiple tiers over time. We can design a master plan that builds gracefully in stages.
+      </div>
+    </section>
+
+    <!-- QUESTIONNAIRE -->
+    <section id="questionnaire">
+      <h2 class="section-title">Your Design Questionnaire</h2>
+      <p class="section-subtitle">
+        Use this visual brief to tell us what you love (and what you don’t). We’ll reply with a custom
+        concept and a clear path forward.
+      </p>
+
+      <form class="questionnaire" id="questionnaireForm">
+        <!-- Step 1 -->
+        <div class="question-step active" data-step="1">
+          <div class="question-title">1. What overall feel are you drawn to?</div>
+          <div class="question-help">Choose the styles that feel most like “you.”</div>
+          <div class="option-grid">
+            <div class="option-tile" data-field="style" data-value="modern-minimal">
+              Clean, modern, minimal
+            </div>
+            <div class="option-tile" data-field="style" data-value="lush-resort">
+              Lush, resort-style retreat
+            </div>
+            <div class="option-tile" data-field="style" data-value="mediterranean">
+              Mediterranean / European
+            </div>
+            <div class="option-tile" data-field="style" data-value="organic-natural">
+              Organic, natural, woodland
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="question-step" data-step="2">
+          <div class="question-title">2. Which features excite you?</div>
+          <div class="question-help">Select all that you’re considering.</div>
+          <div class="option-grid">
+            <div class="option-tile" data-field="features" data-value="pool-spa">
+              Pool or spa
+            </div>
+            <div class="option-tile" data-field="features" data-value="outdoor-kitchen">
+              Outdoor kitchen / bar
+            </div>
+            <div class="option-tile" data-field="features" data-value="fire-feature">
+              Fireplace / fire pit
+            </div>
+            <div class="option-tile" data-field="features" data-value="covered-structure">
+              Covered structure / pergola
+            </div>
+            <div class="option-tile" data-field="features" data-value="seating-dining">
+              Lounge & dining zones
+            </div>
+            <div class="option-tile" data-field="features" data-value="low-maintenance">
+              Low-maintenance planting
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="question-step" data-step="3">
+          <div class="question-title">3. How would you describe your investment comfort level?</div>
+          <div class="question-help">This helps us propose realistic options. Ranges are approximate.</div>
+          <select name="budget">
+            <option value="">Select an approximate range</option>
+            <option>$10k – $20k</option>
+            <option>$20k – $50k</option>
+            <option>$50k – $100k</option>
+            <option>$100k – $150k+</option>
+          </select>
+          <div style="margin-top: 0.7rem;">
+            <label style="font-size: 0.85rem; color: #6b7280;">
+              Anything we should know about your priorities around investment and timing?
+              <textarea name="budgetNotes" placeholder="For example: we may phase the project over 2–3 years."></textarea>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="question-step" data-step="4">
+          <div class="question-title">4. Tell us about your property & how to contact you.</div>
+          <div class="question-help">We’ll review your brief and respond personally with next steps.</div>
+          <div class="field">
+            <input name="name" type="text" placeholder="Full name" required />
+          </div>
+          <div class="field">
+            <input name="email" type="email" placeholder="Email address" required />
+          </div>
+          <div class="field">
+            <input name="location" type="text" placeholder="Project location (city / neighborhood)" />
+          </div>
+          <div class="field">
+            <textarea name="notes" placeholder="Anything else you’d like us to know about your home, family, or how you’d love to use the space?"></textarea>
+          </div>
+        </div>
+
+        <div class="question-nav">
+          <button type="button" class="btn-secondary" id="prevStep">Back</button>
+          <button type="button" class="btn-primary" id="nextStep">Next</button>
+        </div>
+      </form>
+      <p style="font-size:0.8rem;color:#6b7280;margin-top:0.6rem;">
+        This form does not commit you to anything. It’s a starting point for a conversation.
+      </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2 class="section-title">Renders & Finished Installations</h2>
+      <p class="section-subtitle">
+        A single project, shown from initial 3D concept through construction and into the completed space.
+        Web images are intentionally protected — full-resolution examples are shared privately with active clients.
+      </p>
+      <div class="gallery-grid">
+        <!-- RENDERS -->
+        <div class="image-frame">
+          <img src="img/001.png" alt="3D render – pergola concept day view" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/002.png" alt="3D render – backyard layout with pergola" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/003.png" alt="3D render – night lighting concept" />
+          <div class="image-overlay"></div>
+        </div>
+
+        <!-- CONSTRUCTION -->
+        <div class="image-frame">
+          <img src="img/010.jpg" alt="Construction – driveway and side access before" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/011.jpg" alt="Construction – equipment access in wet conditions" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/020.jpg" alt="Construction – flagstone layout in progress" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/021.jpg" alt="Construction – pergola framing underway" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/022.jpg" alt="Construction – walkway stone setting" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/023.jpg" alt="Construction detail – post footing through stone" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/024.jpg" alt="Construction detail – post bracket alignment" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/025.jpg" alt="Construction – irrigation backflow before protection" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/026.jpg" alt="Construction – irrigation backflow insulated" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/027.jpg" alt="Construction – path and planting beds taking shape" />
+          <div class="image-overlay"></div>
+        </div>
+
+        <!-- COMPLETED -->
+        <div class="image-frame">
+          <img src="img/300.jpg" alt="Completed – pergola and lighting with path" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/310.jpg" alt="Completed – pergola from driveway approach" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="image-frame">
+          <img src="img/320.jpg" alt="Completed – covered patio and studio connection" />
+          <div class="image-overlay"></div>
+        </div>
+      </div>
+      <div class="gallery-note">
+        Note: Images are displayed with a protective line screen and reduced resolution to preserve our design
+        IP. Clients receive clearer visuals during the design process.
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <h2 class="section-title">Client Reviews</h2>
+      <p class="section-subtitle">
+        Selected feedback from Sanctuary Outdoor clients. New reviews are submitted privately and published only after approval.
+      </p>
+
+      <div class="reviews-grid">
+        <div>
+          <!-- Example existing reviews -->
+          <div class="review-item">
+            <div class="review-name">J. & A. Martinez – Hillside Residence</div>
+            <div class="review-body">
+              “The 3D renderings were so accurate that walking into the finished yard felt like stepping into the images
+              we’d already fallen in love with.”
+            </div>
+            <div class="review-response">
+              Designer response: Thank you both — your property was an incredible canvas. We loved layering the lighting
+              to make that hillside usable after dark.
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-name">S. Chen – Courtyard Transformation</div>
+            <div class="review-body">
+              “We appreciated having clear pricing before we committed. There were no surprises — which is rare in construction.”
+            </div>
+            <div class="review-response">
+              Designer response: Transparency is a core value for us. We’re glad it helped you feel confident saying “yes” to
+              the full vision.
+            </div>
+          </div>
+        </div>
+
+        <!-- Review submission (moderated) -->
+        <div class="card review-form">
+          <h3 style="margin-top:0;">Share your experience</h3>
+          <p style="font-size:0.85rem;color:#6b7280;margin-bottom:0.8rem;">
+            Reviews are submitted privately and only published after we’ve personally reviewed them. We may also add
+            a brief designer response.
+          </p>
+          <form id="reviewForm">
+            <div class="field">
+              <input type="text" name="reviewName" placeholder="Name(s) as you’d like them displayed" required />
+            </div>
+            <div class="field">
+              <textarea name="reviewBody" placeholder="Your experience with Sanctuary Outdoor" required></textarea>
+            </div>
+            <div class="field">
+              <input type="email" name="reviewEmail" placeholder="Email (not displayed publicly)" required />
+            </div>
+            <button type="submit" class="btn-primary">Submit Review for Approval</button>
+            <p style="font-size:0.78rem;color:#9ca3af;margin-top:0.5rem;">
+              Your review will not appear instantly. We review each submission manually before adding it to this page.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer>
+      <div class="footer-row">
+        <div>
+          © <span id="year"></span> Sanctuary Outdoor 3D Render &amp; Build Co. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <span>
+            Ready to talk? Email us at
+            <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a>.
+          </span>
+          <button type="button" class="footer-link-button" id="aboutToggle">
+            About us
+          </button>
+        </div>
+      </div>
+      <div class="about-details" id="aboutDetails">
+        <strong style="font-family:'Palatino Linotype',serif;color:rgb(204,0,0);">
+          Sanctuary Outdoor 3D Render &amp; Build Co.
+        </strong><br />
+        Design–build studio serving Arizona cities including Scottsdale, Phoenix, Surprise and surrounding areas.<br />
+        Studio mailing address: 10632 N Scottsdale Rd Suite 105, Scottsdale, AZ 85254<br />
+        Phone: (480) 915-0026 &nbsp;•&nbsp;
+        Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple multi-step questionnaire logic
+    const steps = Array.from(document.querySelectorAll(".question-step"));
+    let currentStep = 0;
+    const nextBtn = document.getElementById("nextStep");
+    const prevBtn = document.getElementById("prevStep");
+    const form = document.getElementById("questionnaireForm");
+
+    function showStep(index) {
+      steps.forEach((step, i) => {
+        step.classList.toggle("active", i === index);
+      });
+      prevBtn.style.visibility = index === 0 ? "hidden" : "visible";
+      nextBtn.textContent = index === steps.length - 1 ? "Submit" : "Next";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentStep === steps.length - 1) {
+        // TODO: hook this to an email/API service.
+        alert("Thank you for your brief. We’ll follow up with you personally.");
+        form.reset();
+        currentStep = 0;
+        showStep(currentStep);
+        return;
+      }
+      currentStep++;
+      showStep(currentStep);
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    showStep(currentStep);
+
+    // Option tile selection (multi-select for some questions)
+    document.querySelectorAll(".option-tile").forEach(tile => {
+      tile.addEventListener("click", () => {
+        const field = tile.dataset.field;
+        const isMulti = field === "features";
+        if (!isMulti) {
+          // Deselect other options for this field
+          document.querySelectorAll(`.option-tile[data-field="${field}"]`).forEach(t => {
+            t.classList.remove("selected");
+          });
+        }
+        tile.classList.toggle("selected");
+      });
+    });
+
+    // Review form stub (you’d replace this with a real integration)
+    const reviewForm = document.getElementById("reviewForm");
+    reviewForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you for your review. It has been submitted for manual approval.");
+      reviewForm.reset();
+    });
+
+    // Disable right-click on gallery images (basic friction only)
+    document.querySelectorAll(".image-frame").forEach(frame => {
+      frame.addEventListener("contextmenu", e => e.preventDefault());
+    });
+
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // About Us dropdown in footer
+    const aboutToggle = document.getElementById("aboutToggle");
+    const aboutDetails = document.getElementById("aboutDetails");
+    aboutToggle.addEventListener("click", () => {
+      aboutDetails.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
