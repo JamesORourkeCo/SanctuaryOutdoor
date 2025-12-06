@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Fort Mohave Landscape Design | Sanctuary Outdoor – 3D Render & Build Co.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============================
+   BASE STYLES (matches your main site)
+================================= -->
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #111827;
+    background: #f3f4f6;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(243, 244, 246, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+
+  .logo-main {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #CC0000;
+  }
+
+  .logo-sub {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    letter-spacing: 0.09em;
+    font-size: 0.75rem;
+    color: #CC0000;
+    margin-top: 0.15rem;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.9rem;
+  }
+
+  nav a:hover {
+    color: #111827;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #111827;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    max-width: 38rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.55;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 3.1rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .hero-lead {
+    color: #4b5563;
+    font-size: 1.05rem;
+    max-width: 40rem;
+  }
+
+  /* ACCORDION */
+  .accordion {
+    border-radius: 1rem;
+    background: white;
+    padding: 0.2rem 0.6rem;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  }
+
+  .acc-item {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .acc-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .acc-content {
+    display: none;
+    padding: 0 0.75rem 1rem;
+    font-size: 0.97rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .acc-content.open {
+    display: block;
+  }
+
+  /* IMAGE GALLERY */
+  .gallery {
+    margin-top: 2rem;
+  }
+
+  .gallery img {
+    width: 320px;
+    height: 220px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    margin-right: 0.75rem;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  footer a {
+    color: inherit;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- ============================
+       PAGE HEADER
+=============================== -->
+<header>
+  <div class="nav">
+    <div class="logo-wrap">
+      <div class="logo-main">SANCTUARY OUTDOOR</div>
+      <div class="logo-sub">3D Render & Build Co.</div>
+    </div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#questionnaire">Questionnaire</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/#reviews">Reviews</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================
+       HERO SECTION
+=============================== -->
+<section class="hero">
+  <h1>Fort Mohave Landscape Design & Outdoor Living Spaces</h1>
+  <p class="hero-lead">
+    Custom 3D-designed backyards, engineered outdoor structures, and accurate pricing — built for the
+    unique conditions of Fort Mohave’s monsoons, river-adjacent drainage patterns, and strong desert winds.
+  </p>
+  <button class="btn-primary" onclick="window.location.href='https://sanctuaryoutdoor.com/#questionnaire'">
+    Start Your Design Questionnaire
+  </button>
+</section>
+
+<!-- ============================
+       INTRODUCTION
+=============================== -->
+<section>
+  <h2 class="section-title">Tailored for Fort Mohave Homes</h2>
+  <p class="section-subtitle">
+    Fort Mohave presents a unique combination of extremely flat lots, pockets of poor drainage,
+    river-influenced soil behavior, and sudden wind gusts funneled through the valley. Sanctuary Outdoor
+    designs and builds outdoor living environments engineered specifically for these conditions.
+  </p>
+</section>
+
+<!-- ============================
+       ACCORDION SECTIONS
+=============================== -->
+<section>
+  <div class="accordion">
+
+    <!-- 1. DRAINAGE -->
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        1. Drainage Planning for River-Adjacent & Flat Fort Mohave Lots
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Much of Fort Mohave sits on extremely flat terrain near the Colorado River, where monsoon storms
+          can overwhelm yards lacking engineered drainage paths. Unlike sloped desert communities, water
+          here often has <strong>no natural exit point</strong>.
+        </p>
+        <ul>
+          <li>We survey the yard using a precision transom to map elevations.</li>
+          <li>We design functional drainage paths that work with your landscaping, not against it.</li>
+          <li>We prevent water pooling along block walls, property lines, and patio edges.</li>
+          <li>We integrate drainage solutions into planting, hardscape, and structural layout.</li>
+        </ul>
+        <p>
+          Our design approach ensures stormwater moves safely away from living areas — crucial for Fort Mohave,
+          where sudden heavy monsoons are common.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. WIND & STRUCTURAL DESIGN -->
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        2. Designed for Stronger Desert Winds & Microbursts
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Fort Mohave frequently experiences sudden wind events and river-channel gusts. We emphasize
+          structural safety and long-term durability by:
+        </p>
+        <ul>
+          <li>Using deeper footings suited to open-lot exposures.</li>
+          <li>Selecting pergolas with certified wind-load and snow-load ratings.</li>
+          <li>Anchoring structures with proper fasteners so manufacturer warranties remain valid.</li>
+          <li>Advising against lightweight, non-engineered kits common in basic landscaping bids.</li>
+        </ul>
+        <p>
+          Even when a structure does not require a permit, we build it as though it does — ensuring
+          stability, safety, and longevity in high-wind zones.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. OUR PROCESS -->
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        3. Our Design–Build Process for Fort Mohave Homeowners
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <h4>1️⃣ Discovery</h4>
+        <p>
+          We begin by understanding your goals, inspiration, and the unique physical conditions of your lot.
+          This includes evaluating drainage, soil behavior, wind exposure, and usage patterns.
+        </p>
+
+        <h4>2️⃣ 3D Concept Design</h4>
+        <p>
+          We produce high-fidelity <strong>3D visual renderings</strong> giving you a true preview of your future
+          backyard before construction begins.
+        </p>
+
+        <h4>3️⃣ Dimensional 2D Architectural Layout</h4>
+        <p>
+          After approving your 3D concept, we generate a precise <strong>2D architectural plan</strong> showing
+          dimensions, proportions, elevations, and areas. This is used to:
+        </p>
+        <ul>
+          <li>Confirm accurate pricing</li>
+          <li>Guide construction crews</li>
+          <li>Meet county requirements for larger structures or pool plans</li>
+        </ul>
+
+        <h4>4️⃣ Investment Alignment</h4>
+        <p>
+          We design your project or phases of your project to align with your budget. There is no guesswork —
+          we clearly define the scope so you know exactly what will be built.
+        </p>
+
+        <h4>5️⃣ Design–Build Oversight</h4>
+        <p>
+          We manage installation so every detail matches the approved renderings and layout. Timeline
+          impacts (wind or monsoons) are communicated clearly throughout the project.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. PERMITS -->
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        4. Permits in Fort Mohave (Simplified County Requirements)
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Fort Mohave falls under Mohave County permitting, which is generally more straightforward than city
+          processes. Larger structures, pergolas, and pools may require basic documentation, which we prepare
+          when applicable. Setback rules and utility distances still apply, and we ensure compliance.
+        </p>
+        <p>
+          Most landscape elements do not require formal permits, but they are still built to engineered
+          standards for safety and longevity.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. COST & PROPOSAL -->
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        5. Pricing, Proposals & Phased Planning
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Our proposals reflect realistic pricing based on your approved 3D and 2D plans. Scope is clearly
+          defined, preventing any ambiguity or scope creep. If you want to add or substitute items, we discuss
+          these as separate changes to avoid impacting the design flow or budget unexpectedly.
+        </p>
+        <p>
+          We also offer phased implementation when appropriate, allowing your project to grow over time.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================
+       GALLERY SECTION
+=============================== -->
+<section class="gallery">
+  <h2 class="section-title">Representative Projects</h2>
+  <p class="section-subtitle">
+    A selection of design concepts similar in style or scope to what we create for Fort Mohave homeowners.
+  </p>
+
+  <div style="display:flex;overflow-x:auto;padding-bottom:0.5rem;">
+    <img src="/projects/img1/002.PNG" alt="Project Render 1">
+    <img src="/projects/img1/003.PNG" alt="Project Render 2">
+    <img src="/projects/img1/021.jpg" alt="Project Render 3">
+  </div>
+</section>
+
+<!-- ============================
+       FAQ SECTION
+=============================== -->
+<section>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div class="accordion">
+
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        Do you build wind-rated pergolas?
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Yes. We recommend pergola systems with certified wind-load ratings and install them using the
+          correct fasteners and footing sizes so manufacturer warranties remain valid.
+        </p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        Can you help with drainage issues?
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Yes — drainage is a major concern in Fort Mohave due to flat lots and sudden monsoon storms.
+          We design drainage paths, elevation corrections, and integrated solutions where feasible.
+        </p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-btn" onclick="toggleAcc(this)">
+        How accurate are your 3D designs?
+        <span>+</span>
+      </button>
+      <div class="acc-content">
+        <p>
+          Extremely accurate. Our 3D visuals paired with dimensional 2D architectural layouts give a
+          precise representation of the final built space.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================
+       FOOTER
+=============================== -->
+<footer>
+  <div>© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
+  <div style="margin-top:0.3rem;">
+    Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a>
+  </div>
+</footer>
+
+</main>
+
+<!-- ============================
+       JAVASCRIPT — Accordion
+=============================== -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleAcc(btn) {
+    const content = btn.nextElementSibling;
+    const open = content.classList.contains("open");
+    document.querySelectorAll(".acc-content").forEach(c => c.classList.remove("open"));
+    if (!open) content.classList.add("open");
+  }
+</script>
+
+</body>
+</html>
