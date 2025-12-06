@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow internal folders not meant for indexing
+Disallow: /projects/ 
+Disallow: /img/ 
+
+# Sitemap location
+Sitemap: https://sanctuaryoutdoor.com/sitemap.xml
+
