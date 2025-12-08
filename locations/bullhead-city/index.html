@@ -251,6 +251,122 @@
       padding: 0.25rem 0.6rem;
       background: rgba(17, 24, 39, 0.7);
     }
+/* ---------- SHARED PAGE ELEMENTS ---------- */
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  max-width: 36rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Two-column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,0.9fr);
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+.highlight-card ul {
+  padding-left: 1rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+/* Project gallery thumbnails */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 1.2rem;
+  margin: 1.6rem 0;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display:block;
+}
+
+.project-thumb div {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  color: #4b5563;
+}
+
+/* Accordion styles */
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.accordion-item,
+.faq-item {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  overflow: hidden;
+}
+
+.accordion-header,
+.faq-header {
+  width: 100%;
+  text-align: left;
+  background: #f9fafb;
+  padding: 0.85rem 1rem;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content,
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease;
+}
+
+.accordion-inner,
+.faq-inner {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.accordion-item.open .accordion-content,
+.faq-item.open .faq-content {
+  max-height: 600px; /* allow expansion */
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .icon,
+.faq-item.open .icon {
+  transform: rotate(90deg);
+}
+
+
 </style>
 </head>
 <body>
