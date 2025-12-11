@@ -481,7 +481,9 @@
       gap: 0.5rem;
     }
 
-    input, textarea, select {
+    input,
+    textarea,
+    select {
       width: 100%;
       padding: 0.5rem 0.6rem;
       border-radius: 0.5rem;
@@ -722,6 +724,71 @@
       margin-bottom: 0.7rem;
     }
 
+    /* Accordion for detailed review */
+    .accordion {
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      background: white;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      border: none;
+      background: transparent;
+      text-align: left;
+    }
+
+    .accordion-header:hover {
+      background: #f9fafb;
+    }
+
+    .accordion-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .accordion-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #111827;
+    }
+
+    .accordion-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .accordion-body {
+      padding: 0 1.1rem 1rem;
+      display: none;
+      font-size: 0.88rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .accordion-arrow {
+      transition: transform 0.2s ease;
+      font-size: 1.1rem;
+      color: #6b7280;
+    }
+
+    .accordion.open .accordion-body {
+      display: block;
+    }
+
+    .accordion.open .accordion-arrow {
+      transform: rotate(90deg);
+    }
+
     footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
@@ -763,7 +830,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#service-areas">Service Areas</a>
-        <button class="btn-primary" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
+        <button class="btn-primary" type="button" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
           Start Your Design Brief
         </button>
       </nav>
@@ -784,7 +851,7 @@
           Serving Kingman, Golden Valley, Bullhead City, Fort Mohave, Hualapai, and Lake Havasu City, Arizona.
         </p>
         <div style="margin-top: 1.2rem;">
-          <button class="btn-primary" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
+          <button class="btn-primary" type="button" onclick="document.getElementById('questionnaire').scrollIntoView({behavior:'smooth'});">
             Start Your Design Questionnaire
           </button>
         </div>
@@ -960,7 +1027,7 @@
       <div class="project-gallery">
         <h3 class="project-title">Loop 1</h3>
         <div class="carousel" data-project="img1">
-          <button class="carousel-arrow carousel-arrow-left" data-direction="prev" aria-label="Previous image">
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
             ‹
           </button>
           <div class="carousel-track" data-project="img1">
@@ -996,7 +1063,7 @@
             </picture>
 
           </div>
-          <button class="carousel-arrow carousel-arrow-right" data-direction="next" aria-label="Next image">
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
             ›
           </button>
         </div>
@@ -1006,7 +1073,7 @@
       <div class="project-gallery">
         <h3 class="project-title">Loop 2</h3>
         <div class="carousel" data-project="img2">
-          <button class="carousel-arrow carousel-arrow-left" data-direction="prev" aria-label="Previous image">
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
             ‹
           </button>
           <div class="carousel-track" data-project="img2">
@@ -1047,7 +1114,7 @@
             </picture>
 
           </div>
-          <button class="carousel-arrow carousel-arrow-right" data-direction="next" aria-label="Next image">
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
             ›
           </button>
         </div>
@@ -1057,7 +1124,7 @@
       <div class="project-gallery">
         <h3 class="project-title">Loop 3</h3>
         <div class="carousel" data-project="img3">
-          <button class="carousel-arrow carousel-arrow-left" data-direction="prev" aria-label="Previous image">
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
             ‹
           </button>
           <div class="carousel-track" data-project="img3">
@@ -1113,7 +1180,7 @@
             </picture>
 
           </div>
-          <button class="carousel-arrow carousel-arrow-right" data-direction="next" aria-label="Next image">
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
             ›
           </button>
         </div>
@@ -1123,7 +1190,7 @@
       <div class="project-gallery">
         <h3 class="project-title">Loop 4</h3>
         <div class="carousel" data-project="img4">
-          <button class="carousel-arrow carousel-arrow-left" data-direction="prev" aria-label="Previous image">
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
             ‹
           </button>
           <div class="carousel-track" data-project="img4">
@@ -1139,7 +1206,7 @@
             </picture>
 
           </div>
-          <button class="carousel-arrow carousel-arrow-right" data-direction="next" aria-label="Next image">
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
             ›
           </button>
         </div>
@@ -1149,7 +1216,7 @@
       <div class="project-gallery">
         <h3 class="project-title">Loop 5</h3>
         <div class="carousel" data-project="img5">
-          <button class="carousel-arrow carousel-arrow-left" data-direction="prev" aria-label="Previous image">
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
             ‹
           </button>
           <div class="carousel-track" data-project="img5">
@@ -1170,7 +1237,7 @@
             </picture>
 
           </div>
-          <button class="carousel-arrow carousel-arrow-right" data-direction="next" aria-label="Next image">
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
             ›
           </button>
         </div>
@@ -1194,6 +1261,7 @@
         </div>
       </div>
     </section>
+
     <!-- REVIEWS -->
     <section id="reviews">
       <h2 class="section-title">Client Reviews</h2>
@@ -1203,9 +1271,35 @@
 
       <div class="reviews-grid">
         <div>
-          <!-- Example existing reviews -->
+          <!-- Detailed accordion review -->
+          <div class="accordion review-accordion">
+            <button class="accordion-header" type="button">
+              <div class="accordion-header-text">
+                <span class="accordion-title">Full-property redesign with drainage + pergolas (full review)</span>
+                <span class="accordion-meta">Mrs. "S" – Full Property Landscape Installation</span>
+              </div>
+              <span class="accordion-arrow">›</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                My number one item was to see what type of design and illustration Jim could produce with my verbal
+                instructions of what I wanted. I was not disappointed. He came up with a beautiful design.
+              </p>
+              <p>
+                Jim was very professional. He notified me at every step and checked at the end of each day to see if
+                I wanted to make any changes. I was also shown examples of product that I could choose from.
+              </p>
+              <p>
+                In the end, Jim installed a drain so my yard drained properly. He also put in flagstone, a drip
+                irrigation system, a walkway, gravel, a flowerbed, a future tree area, gravel on both sides of my
+                house and two awesome pergolas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Example existing shorter reviews -->
           <div class="review-item">
-            <div class="review-name">J. & A. Martinez – Hillside Residence</div>
+            <div class="review-name">J. &amp; A. Martinez – Hillside Residence</div>
             <div class="review-body">
               “The 3D renderings were so accurate that walking into the finished yard felt like stepping into the images
               we’d already fallen in love with.”
@@ -1298,7 +1392,7 @@
         Ready to talk? Email us at <a href="mailto:Jim@sanctuaryoutdoor.com">Jim@SanctuaryOutdoor.com</a>.
       </div>
       <div style="margin-top:0.3rem;">
-        Images are protected & watermarked. Use without permission is prohibited.
+        Images are protected &amp; watermarked. Use without permission is prohibited.
       </div>
     </footer>
   </main>
@@ -1345,8 +1439,8 @@
       steps.forEach((step, i) => {
         step.classList.toggle("active", i === index);
       });
-      prevBtn.style.visibility = index === 0 ? "hidden" : "visible";
-      nextBtn.textContent = index === steps.length - 1 ? "Submit" : "Next";
+      if (prevBtn) prevBtn.style.visibility = index === 0 ? "hidden" : "visible";
+      if (nextBtn) nextBtn.textContent = index === steps.length - 1 ? "Submit" : "Next";
     }
 
     // Option tile selection
@@ -1385,94 +1479,110 @@
       return { templateParams, styleTiles, featureTiles };
     }
 
-    nextBtn.addEventListener("click", () => {
-      // On last step, submit via EmailJS
-      if (currentStep === steps.length - 1) {
-        const honeypot = questionnaireForm.querySelector('input[name="website"]');
+    if (nextBtn && prevBtn && questionnaireForm) {
+      nextBtn.addEventListener("click", () => {
+        // On last step, submit via EmailJS
+        if (currentStep === steps.length - 1) {
+          const honeypot = questionnaireForm.querySelector('input[name="website"]');
+          if (honeypot && honeypot.value !== "") {
+            return; // bot
+          }
+
+          if (!isHuman(questionnaireCaptchaWidget)) {
+            alert("Please verify that you are not a robot.");
+            return;
+          }
+
+          const { templateParams } = collectQuestionnaireValues();
+
+          if (!templateParams.style && !templateParams.features) {
+            alert("Please select at least one style or feature so we can better understand your preferences.");
+            return;
+          }
+
+          emailjs.send("service_iyzih8l", "template_ihj5htg", templateParams)
+            .then(() => {
+              alert("Thank you! Your design brief has been sent. We’ll email you personally.");
+              questionnaireForm.reset();
+              if (typeof grecaptcha !== "undefined" && questionnaireCaptchaWidget !== null) {
+                grecaptcha.reset(questionnaireCaptchaWidget);
+              }
+              currentStep = 0;
+              showStep(currentStep);
+            })
+            .catch((error) => {
+              console.error("Questionnaire EmailJS error:", error);
+              alert("There was a problem submitting your questionnaire. Please try again.");
+            });
+
+          return;
+        }
+
+        currentStep++;
+        showStep(currentStep);
+      });
+
+      prevBtn.addEventListener("click", () => {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+
+      showStep(currentStep);
+    }
+
+    // Review form EmailJS logic
+    const reviewForm = document.getElementById("reviewForm");
+    if (reviewForm) {
+      reviewForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const honeypot = reviewForm.querySelector('input[name="website"]');
         if (honeypot && honeypot.value !== "") {
           return; // bot
         }
 
-        if (!isHuman(questionnaireCaptchaWidget)) {
+        if (!isHuman(reviewCaptchaWidget)) {
           alert("Please verify that you are not a robot.");
           return;
         }
 
-        const { templateParams } = collectQuestionnaireValues();
+        const templateParams = {
+          reviewName: reviewForm.reviewName.value,
+          reviewBody: reviewForm.reviewBody.value,
+          reviewEmail: reviewForm.reviewEmail.value
+        };
 
-        if (!templateParams.style && !templateParams.features) {
-          alert("Please select at least one style or feature so we can better understand your preferences.");
-          return;
-        }
-
-        emailjs.send("service_iyzih8l", "template_ihj5htg", templateParams)
+        emailjs.send("service_iyzih8l", "template_vprpl8b", templateParams)
           .then(() => {
-            alert("Thank you! Your design brief has been sent. We’ll email you personally.");
-            questionnaireForm.reset();
-            if (typeof grecaptcha !== "undefined" && questionnaireCaptchaWidget !== null) {
-              grecaptcha.reset(questionnaireCaptchaWidget);
+            alert("Thank you! Your review has been submitted.");
+            reviewForm.reset();
+            if (typeof grecaptcha !== "undefined" && reviewCaptchaWidget !== null) {
+              grecaptcha.reset(reviewCaptchaWidget);
             }
-            currentStep = 0;
-            showStep(currentStep);
           })
           .catch((error) => {
-            console.error("Questionnaire EmailJS error:", error);
-            alert("There was a problem submitting your questionnaire. Please try again.");
+            console.error("Review EmailJS error:", error);
+            alert("There was a problem submitting your review. Please try again.");
           });
+      });
+    }
 
-        return;
-      }
-
-      currentStep++;
-      showStep(currentStep);
-    });
-
-    prevBtn.addEventListener("click", () => {
-      if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    });
-
-    showStep(currentStep);
-
-    // Review form EmailJS logic
-    const reviewForm = document.getElementById("reviewForm");
-    reviewForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const honeypot = reviewForm.querySelector('input[name="website"]');
-      if (honeypot && honeypot.value !== "") {
-        return; // bot
-      }
-
-      if (!isHuman(reviewCaptchaWidget)) {
-        alert("Please verify that you are not a robot.");
-        return;
-      }
-
-      const templateParams = {
-        reviewName: reviewForm.reviewName.value,
-        reviewBody: reviewForm.reviewBody.value,
-        reviewEmail: reviewForm.reviewEmail.value
-      };
-
-      emailjs.send("service_iyzih8l", "template_vprpl8b", templateParams)
-        .then(() => {
-          alert("Thank you! Your review has been submitted.");
-          reviewForm.reset();
-          if (typeof grecaptcha !== "undefined" && reviewCaptchaWidget !== null) {
-            grecaptcha.reset(reviewCaptchaWidget);
-          }
-        })
-        .catch((error) => {
-          console.error("Review EmailJS error:", error);
-          alert("There was a problem submitting your review. Please try again.");
-        });
+    // Accordion logic for detailed review
+    document.querySelectorAll(".accordion").forEach(acc => {
+      const header = acc.querySelector(".accordion-header");
+      if (!header) return;
+      header.addEventListener("click", () => {
+        acc.classList.toggle("open");
+      });
     });
 
     // Year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
 
   <!-- SCRIPT BLOCK 2: Carousel + Lightbox -->
@@ -1481,6 +1591,8 @@
     document.querySelectorAll(".carousel").forEach(carousel => {
       const track = carousel.querySelector(".carousel-track");
       const arrows = carousel.querySelectorAll(".carousel-arrow");
+
+      if (!track) return;
 
       arrows.forEach(arrow => {
         arrow.addEventListener("click", () => {
@@ -1506,7 +1618,7 @@
       let currentIndex = 0;
 
       function updateLightboxImage() {
-        if (!currentProject) return;
+        if (!currentProject || !lightboxImg) return;
         const track = document.querySelector(`.carousel-track[data-project="${currentProject}"]`);
         if (!track) return;
         const imgs = track.querySelectorAll(".carousel-image");
@@ -1522,12 +1634,14 @@
         currentProject = project;
         currentIndex = index;
         updateLightboxImage();
+        if (!lightbox) return;
         lightbox.classList.add("open");
         lightbox.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
       }
 
       function closeLightbox() {
+        if (!lightbox) return;
         lightbox.classList.remove("open");
         lightbox.setAttribute("aria-hidden", "true");
         document.body.style.overflow = "";
@@ -1548,7 +1662,7 @@
       });
 
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lightbox.classList.contains("open")) {
+        if (e.key === "Escape" && lightbox && lightbox.classList.contains("open")) {
           closeLightbox();
         }
       });
