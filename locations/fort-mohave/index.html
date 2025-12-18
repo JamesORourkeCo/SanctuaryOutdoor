@@ -6,11 +6,11 @@
   <!-- ============================
        FORT MOHAVE SEO META TAGS
   ============================== -->
-
   <title>Fort Mohave, AZ Landscape Design & 3D Outdoor Living | Sanctuary Outdoor</title>
 
   <meta name="description" content="3D landscape design, architectural plans, drainage-aware planning, and wind-conscious outdoor structures for Fort Mohave, AZ. See your future outdoor space in 3D before construction begins." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://sanctuaryoutdoor.com/locations/fort-mohave/" />
 
   <!-- Open Graph -->
@@ -18,7 +18,13 @@
   <meta property="og:title" content="Fort Mohave, AZ Landscape Design & Outdoor Living | Sanctuary Outdoor">
   <meta property="og:description" content="High-fidelity 3D outdoor living design and build services in Fort Mohave, Arizona. Photo-realistic 3D previews, accurate proposals, and engineered outdoor structures for foothill and master-planned lots.">
   <meta property="og:url" content="https://sanctuaryoutdoor.com/locations/fort-mohave/">
-  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/img1/021.jpg">
+  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fort Mohave, AZ Landscape Design & 3D Outdoor Living | Sanctuary Outdoor" />
+  <meta name="twitter:description" content="Render-first 3D landscape design, drainage-aware planning, and wind-conscious outdoor living concepts for Fort Mohave, AZ." />
+  <meta name="twitter:image" content="https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg" />
 
   <!-- ============================
        FORT MOHAVE JSON-LD SCHEMA
@@ -33,7 +39,7 @@
     "name": "Sanctuary Outdoor – 3D Render & Build Co.",
     "url": "https://sanctuaryoutdoor.com/locations/fort-mohave/",
     "description": "3D landscape design, architectural 2D drawings, drainage planning, and wind-conscious outdoor structures for Fort Mohave, AZ foothill and master-planned neighborhoods.",
-    "image": "https://sanctuaryoutdoor.com/projects/img1/021.jpg",
+    "image": "https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg",
     "telephone": "+1-480-915-0026",
     "email": "Jim@SanctuaryOutdoor.com",
     "address": {
@@ -93,6 +99,13 @@
   }
   </script>
 
+  <!-- Canonicalize /index.html -->
+  <script>
+    if (location.pathname.endsWith("/index.html")) {
+      location.replace("https://sanctuaryoutdoor.com/locations/fort-mohave/");
+    }
+  </script>
+
   <!-- ============================
        PAGE STYLES
   ============================== -->
@@ -120,6 +133,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1.25rem;
+      gap: 0.75rem;
     }
 
     .logo {
@@ -130,6 +144,7 @@
       font-size: 1rem;
       color: #CC0000;
       line-height: 1.1;
+      flex: 0 0 auto;
     }
 
     .logo-sub {
@@ -142,11 +157,21 @@
       margin-top: 2px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.85rem;
+      flex: 1 1 auto;
+    }
+
     nav a {
-      margin-left: 1rem;
+      margin-left: 0;
       text-decoration: none;
       color: #4b5563;
       font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -289,7 +314,6 @@
     }
 
     /* Accordion */
-
     .accordion-group {
       margin-top: 1.5rem;
       display: grid;
@@ -358,7 +382,6 @@
     }
 
     /* Projects */
-
     .project-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -383,7 +406,6 @@
     }
 
     /* FAQ */
-
     .faq-list {
       margin-top: 1rem;
       display: grid;
@@ -448,12 +470,25 @@
       color: inherit;
     }
 
-    @media (max-width: 800px) {
+    /* Mobile / small tablet: force single column earlier to avoid cramped two-up */
+    @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
       .two-col {
         grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav {
+        padding: 0.7rem 1rem;
+      }
+      nav a {
+        font-size: 0.88rem;
+      }
+      .btn-primary {
+        width: 100%;
       }
     }
   </style>
@@ -466,11 +501,11 @@
         <span class="logo-sub">3D Render and Build Co.</span>
       </div>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/index.html#services">Services</a>
-        <a href="/index.html#gallery">Gallery</a>
-        <a href="/index.html#reviews">Reviews</a>
-        <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#gallery">Gallery</a>
+        <a href="/#reviews">Reviews</a>
+        <button class="btn-primary" type="button" onclick="window.location.href='/#questionnaire';">
           Start Your 3D Design Brief
         </button>
       </nav>
@@ -490,7 +525,7 @@
           your future outdoor space before work begins.
         </p>
         <div style="margin-top: 1.2rem;">
-          <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+          <button class="btn-primary" type="button" onclick="window.location.href='/#questionnaire';">
             Start Your 3D Design Questionnaire
           </button>
         </div>
@@ -706,43 +741,39 @@
     </section>
 
     <!-- FEATURED PROJECTS -->
-<!-- FEATURED PROJECTS -->
-<section>
-  <h2 class="section-title">Representative projects</h2>
-  <p class="section-subtitle">
-    Below are sample 3D renderings and completed outdoor spaces that reflect the level of detail and
-    quality we bring to Fort Mohave–area projects.
-  </p>
+    <section>
+      <h2 class="section-title">Representative projects</h2>
+      <p class="section-subtitle">
+        Below are sample 3D renderings and completed outdoor spaces that reflect the level of detail and
+        quality we bring to Fort Mohave–area projects.
+      </p>
 
-  <div class="project-gallery">
+      <div class="project-gallery">
+        <div class="project-thumb">
+          <picture>
+            <source srcset="/projects/1200dpi/img1/002.jpg" media="(min-width: 900px)">
+            <img src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola">
+          </picture>
+          <div>Modern desert outdoor living concept with pool, fire feature, and pergola.</div>
+        </div>
 
-    <div class="project-thumb">
-      <picture>
-        <source srcset="/projects/1200dpi/img1/002.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola">
-      </picture>
-      <div>Modern desert outdoor living concept with pool, fire feature, and pergola.</div>
-    </div>
+        <div class="project-thumb">
+          <picture>
+            <source srcset="/projects/1200dpi/img4/001.jpg" media="(min-width: 900px)">
+            <img src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing">
+          </picture>
+          <div>Outdoor living concept featuring structured layout and clean architectural detailing.</div>
+        </div>
 
-    <div class="project-thumb">
-      <picture>
-        <source srcset="/projects/1200dpi/img4/001.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing">
-      </picture>
-      <div>Outdoor living concept featuring structured layout and clean architectural detailing.</div>
-    </div>
-
-    <div class="project-thumb">
-      <picture>
-        <source srcset="/projects/1200dpi/img3/001.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img3/001.jpg" alt="3D rendering preview of a complete backyard transformation">
-      </picture>
-      <div>3D render previewing a full backyard transformation.</div>
-    </div>
-
-  </div>
-</section>
-
+        <div class="project-thumb">
+          <picture>
+            <source srcset="/projects/1200dpi/img3/001.jpg" media="(min-width: 900px)">
+            <img src="/projects/600dpi/img3/001.jpg" alt="3D rendering preview of a complete backyard transformation">
+          </picture>
+          <div>3D render previewing a full backyard transformation.</div>
+        </div>
+      </div>
+    </section>
 
     <!-- FORT MOHAVE FAQ -->
     <section>
@@ -884,21 +915,22 @@
         </div>
       </div>
     </section>
-<section style="margin-top:3rem;">
-  <h2 class="section-title">Nearby Service Areas</h2>
-  <p class="section-subtitle">
-    Serving homeowners throughout the Colorado River and northwest Arizona region:
-  </p>
 
-  <ul style="font-size:0.95rem; color:#4b5563; padding-left:1.2rem; line-height:1.6;">
-    <li><a href="/locations/bullhead-city/">3D landscape design in Bullhead City, AZ</a></li>
-    <li><a href="/locations/kingman/">Landscape design in Kingman, AZ</a></li>
-    <li><a href="/locations/golden-valley/">Outdoor living design in Golden Valley, AZ</a></li>
-    <li><a href="/locations/hualapai/">3D landscape design in Hualapai, AZ</a></li>
-    <li><a href="/locations/lake-havasu-city/">Outdoor living design in Lake Havasu City, AZ</a></li>
-    <li><a href="/">Return to Sanctuary Outdoor Home</a></li>
-  </ul>
-</section>
+    <section style="margin-top:3rem;">
+      <h2 class="section-title">Nearby Service Areas</h2>
+      <p class="section-subtitle">
+        Serving homeowners throughout the Colorado River and northwest Arizona region:
+      </p>
+
+      <ul style="font-size:0.95rem; color:#4b5563; padding-left:1.2rem; line-height:1.6;">
+        <li><a href="/locations/bullhead-city/">3D landscape design in Bullhead City, AZ</a></li>
+        <li><a href="/locations/kingman/">Landscape design in Kingman, AZ</a></li>
+        <li><a href="/locations/golden-valley/">Outdoor living design in Golden Valley, AZ</a></li>
+        <li><a href="/locations/hualapai/">3D landscape design in Hualapai, AZ</a></li>
+        <li><a href="/locations/lake-havasu-city/">Outdoor living design in Lake Havasu City, AZ</a></li>
+        <li><a href="/">Return to Sanctuary Outdoor Home</a></li>
+      </ul>
+    </section>
 
     <!-- CTA -->
     <section>
@@ -907,7 +939,7 @@
         Start with a 3D design questionnaire. There is no obligation—it simply gives us enough information to
         respond with realistic ideas and next steps tailored to your property.
       </p>
-      <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+      <button class="btn-primary" type="button" onclick="window.location.href='/#questionnaire';">
         Start Your 3D Design Questionnaire
       </button>
     </section>
@@ -916,14 +948,15 @@
     <footer>
       <div>© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
       <div style="margin-top:0.3rem;">
-        Return to the main site: <a href="/index.html">SanctuaryOutdoor.com</a>
+        Return to the main site: <a href="/">SanctuaryOutdoor.com</a>
       </div>
     </footer>
   </main>
 
   <script>
     // Year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Accordion logic
     function setupAccordion(selectorItem, selectorHeader, selectorContent) {
@@ -934,13 +967,14 @@
 
         header.addEventListener("click", () => {
           const isOpen = item.classList.contains("open");
-          // Close all in group
           const group = item.parentElement;
+
           group.querySelectorAll(selectorItem).forEach(other => {
             other.classList.remove("open");
             const c = other.querySelector(selectorContent);
             if (c) c.style.maxHeight = null;
           });
+
           if (!isOpen) {
             item.classList.add("open");
             content.style.maxHeight = content.scrollHeight + "px";
