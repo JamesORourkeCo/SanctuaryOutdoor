@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Root Website -->
   <url>
     <loc>https://sanctuaryoutdoor.com/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-18</lastmod>
   </url>
 
-  <!-- Service Area Landing Pages -->
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/bullhead-city/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/fort-mohave/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/golden-valley/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/hualapai/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/kingman/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
   <url>
     <loc>https://sanctuaryoutdoor.com/locations/lake-havasu-city/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
     <lastmod>2025-12-18</lastmod>
   </url>
 
