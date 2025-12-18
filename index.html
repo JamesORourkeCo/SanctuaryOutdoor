@@ -94,16 +94,12 @@
   <!-- WebSite SCHEMA -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://sanctuaryoutdoor.com/",
-    "name": "Sanctuary Outdoor",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://sanctuaryoutdoor.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://sanctuaryoutdoor.com/#website",
+      "url": "https://sanctuaryoutdoor.com/",
+      "name": "Sanctuary Outdoor"
     }
-  }
   </script>
 
   <!-- Breadcrumb SCHEMA -->
@@ -216,6 +212,11 @@
     ]
   }
   </script>
+    <script>
+      if (location.pathname.endsWith("/index.html")) {
+        location.replace("https://sanctuaryoutdoor.com/");
+      }
+    </script>
 
   <style>
     body {
@@ -1298,17 +1299,12 @@
           </div>
 
           <!-- Example existing shorter reviews -->
-          <div class="review-item">
-            <div class="review-name">J. &amp; A. Martinez – Hillside Residence</div>
-            <div class="review-body">
-              “The 3D renderings were so accurate that walking into the finished yard felt like stepping into the images
-              we’d already fallen in love with.”
-            </div>
-            <div class="review-response">
-              Designer response: Thank you both — your property was an incredible canvas. We loved layering the lighting
-              to make that hillside usable after dark.
-            </div>
-          </div>
+    <div class="review-item">
+      <div class="review-name">Juarez Williams</div>
+      <div class="review-body">
+    “I'm one of the workers. The experience I've had with these projects has taught me a lot. I'm thankful Mr. O'Rourke took a chance with me and employed me. I am looking forward to doing more projects and helping this business grow. Thank you so much.”
+      </div>
+    </div>
           <div class="review-item">
             <div class="review-name">S. Chen – Courtyard Transformation</div>
             <div class="review-body">
