@@ -18,7 +18,7 @@
   <meta property="og:title" content="Hualapai Mountain, AZ Landscape Design & Outdoor Living | Sanctuary Outdoor">
   <meta property="og:description" content="High-fidelity 3D outdoor living design and build services for Hualapai Mountain communities near Kingman, Arizona. Photo-realistic 3D previews, accurate proposals, and engineered outdoor structures for hillside homes.">
   <meta property="og:url" content="https://sanctuaryoutdoor.com/locations/hualapai/">
-  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/img1/021.jpg">
+  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg">
 
   <!-- ============================
        HUALAPAI JSON-LD SCHEMA
@@ -33,7 +33,7 @@
     "name": "Sanctuary Outdoor – 3D Render & Build Co.",
     "url": "https://sanctuaryoutdoor.com/locations/hualapai/",
     "description": "3D landscape design, architectural 2D drawings, drainage planning, and wind-resilient outdoor structures for Hualapai Mountain communities near Kingman, AZ.",
-    "image": "https://sanctuaryoutdoor.com/projects/img1/021.jpg",
+    "image": "https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg",
     "telephone": "+1-480-915-0026",
     "email": "Jim@SanctuaryOutdoor.com",
     "address": {
@@ -452,9 +452,36 @@
     }
 
     @media (max-width: 800px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-start;
+      }
+      nav a {
+        margin-left: 0;
+      }
+      header nav .btn-primary {
+        width: 100%;
+      }
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
       .two-col {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -469,11 +496,11 @@
         <span class="logo-sub">3D Render and Build Co.</span>
       </div>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/index.html#services">Services</a>
-        <a href="/index.html#gallery">Gallery</a>
-        <a href="/index.html#reviews">Reviews</a>
-        <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#gallery">Gallery</a>
+        <a href="/#reviews">Reviews</a>
+        <button class="btn-primary" onclick="window.location.href='/#questionnaire';">
           Start Your 3D Design Brief
         </button>
       </nav>
@@ -492,7 +519,7 @@
           outdoor space works in all seasons—not just on clear days.
         </p>
         <div style="margin-top: 1.2rem;">
-          <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+          <button class="btn-primary" onclick="window.location.href='/#questionnaire';">
             Start Your 3D Design Questionnaire
           </button>
         </div>
@@ -736,7 +763,7 @@
     <div class="project-thumb">
       <picture>
         <source srcset="/projects/1200dpi/img1/002.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola">
+        <img loading="lazy" decoding="async" src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola">
       </picture>
       <div>Modern desert outdoor living concept with pool, fire feature, and pergola.</div>
     </div>
@@ -744,7 +771,7 @@
     <div class="project-thumb">
       <picture>
         <source srcset="/projects/1200dpi/img4/001.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing">
+        <img loading="lazy" decoding="async" src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing">
       </picture>
       <div>Outdoor living concept featuring structured layout and clean architectural detailing.</div>
     </div>
@@ -752,7 +779,7 @@
     <div class="project-thumb">
       <picture>
         <source srcset="/projects/1200dpi/img3/001.jpg" media="(min-width: 900px)">
-        <img src="/projects/600dpi/img3/001.jpg" alt="3D rendering of a complete backyard transformation">
+        <img loading="lazy" decoding="async" src="/projects/600dpi/img3/001.jpg" alt="3D rendering of a complete backyard transformation">
       </picture>
       <div>3D render previewing a full backyard transformation.</div>
     </div>
@@ -926,7 +953,7 @@
         Start with a 3D design questionnaire. There is no obligation—it simply gives us enough information to
         respond with realistic ideas and next steps tailored to your hillside property.
       </p>
-      <button class="btn-primary" onclick="window.location.href='/index.html#questionnaire';">
+      <button class="btn-primary" onclick="window.location.href='/#questionnaire';">
         Start Your 3D Design Questionnaire
       </button>
     </section>
@@ -935,7 +962,7 @@
     <footer>
       <div>© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
       <div style="margin-top:0.3rem;">
-        Return to the main site: <a href="/index.html">SanctuaryOutdoor.com</a>
+        Return to the main site: <a href="/">SanctuaryOutdoor.com</a>
       </div>
     </footer>
   </main>
