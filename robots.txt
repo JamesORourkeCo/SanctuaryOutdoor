@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sanctuaryoutdoor.com/sitemap.xml
+# We do not block images or any assets.
 
+Sitemap: https://sanctuaryoutdoor.com/sitemap.xml
