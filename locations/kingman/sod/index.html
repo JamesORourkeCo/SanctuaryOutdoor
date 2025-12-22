@@ -21,6 +21,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Kingman Sod Installation – Sanctuary Outdoor" />
   <meta property="og:description" content="Tall fescue sod, water-wise edging, and proper grading for Kingman yards. Add color and life to your outdoor space with a plan that respects water." />
   <meta property="og:url" content="https://sanctuaryoutdoor.com/locations/kingman/sod/" />
@@ -56,6 +57,37 @@
   }
   </script>
 
+  <!-- Service SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://sanctuaryoutdoor.com/locations/kingman/sod/#service",
+  "name": "Sod Installation in Kingman, AZ",
+  "description": "Sod installation and lawn zone design in Kingman, Arizona. We grade and prepare the base for proper drainage and recommend bordered sod areas to stay water-wise while adding color and life to your yard.",
+  "serviceType": "Sod Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://sanctuaryoutdoor.com/#business",
+    "name": "Sanctuary Outdoor – 3D Render & Build Co.",
+    "url": "https://sanctuaryoutdoor.com/"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Kingman",
+      "addressRegion": "AZ",
+      "addressCountry": "US"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "url": "https://sanctuaryoutdoor.com/locations/kingman/sod/",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
   <!-- WebPage SCHEMA -->
   <script type="application/ld+json">
   {
@@ -128,7 +160,23 @@
   }
   </script>
 
-  <style>
+  
+
+  <!-- Review SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "@id": "https://sanctuaryoutdoor.com/#business",
+      "name": "Sanctuary Outdoor – 3D Render & Build Co."
+    },
+    "author": { "@type": "Person", "name": "Mrs. S" },
+    "reviewBody": "Jim installed a drain so my yard drained properly."
+  }
+  </script>
+<style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -478,7 +526,24 @@
       </div>
     </section>
 
-    <!-- NEXT STEPS -->
+    
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <h2 class="section-title">Kingman Reviews</h2>
+      <p class="section-subtitle">
+        A quick note from a recent client on how practical drainage work can improve a yard.
+      </p>
+
+      <div class="card">
+        <div style="font-weight:600; margin-bottom:0.25rem;">Mrs. S</div>
+        <div style="color:#4b5563; line-height:1.6;">
+          “Jim installed a drain so my yard drained properly.”
+        </div>
+      </div>
+    </section>
+    
+
+<!-- NEXT STEPS -->
     <section id="next-steps">
       <h2 class="section-title">Next steps</h2>
       <p class="section-subtitle">
