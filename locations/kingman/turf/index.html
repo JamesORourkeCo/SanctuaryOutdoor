@@ -90,7 +90,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Sod Installation",
+      "name": "Turf Installation",
       "item": "https://sanctuaryoutdoor.com/locations/kingman/turf/"
     }
   ]
@@ -375,6 +375,119 @@
       .grid-2 { grid-template-columns: minmax(0, 1fr); }
       nav a { margin-left: 0.75rem; }
     }
+  
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .review-item {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 0.6rem;
+    }
+
+    .review-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .review-body {
+      font-size: 0.88rem;
+      color: #4b5563;
+      margin-top: 0.2rem;
+    }
+
+    .review-response {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-left: 2px solid #e5e7eb;
+      padding-left: 0.5rem;
+    }
+
+    /* Accordion */
+    .accordion {
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      background: white;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      border: none;
+      background: transparent;
+      text-align: left;
+    }
+
+    .accordion-header:hover {
+      background: #f9fafb;
+    }
+
+    .accordion-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .accordion-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #111827;
+    }
+
+    .accordion-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .accordion-body {
+      padding: 0 1.1rem 1rem;
+      display: none;
+      font-size: 0.88rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .accordion-arrow {
+      transition: transform 0.2s ease;
+      font-size: 1.1rem;
+      color: #6b7280;
+    }
+
+    .accordion.open .accordion-body {
+      display: block;
+    }
+
+    .accordion.open .accordion-arrow {
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 800px) {
+      .reviews-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
   </style>
 </head>
 
@@ -389,7 +502,7 @@
         <a href="https://sanctuaryoutdoor.com/">Home</a>
         <a href="https://sanctuaryoutdoor.com/locations/kingman/">Kingman</a>
         <a href="https://sanctuaryoutdoor.com/#questionnaire">Design Brief</a>
-        <a href="mailto:Jim@SanctuaryOutdoor.com?subject=Kingman%20Sod%20Question%20(Photos%20Attached)&body=Hi%20Jim%2C%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20sod%20for%20my%20Kingman%20yard.%20I%E2%80%99ll%20attach%20photos%20to%20this%20email.%0D%0A%0D%0AProject%20address%20or%20neighborhood%3A%0D%0AQuestions%3A%0D%0A%0D%0AThanks%2C">
+        <a href="mailto:Jim@SanctuaryOutdoor.com?subject=Kingman%20Turf%20Question%20(Photos%20Attached)&body=Hi%20Jim%2C%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20sod%20for%20my%20Kingman%20yard.%20I%E2%80%99ll%20attach%20photos%20to%20this%20email.%0D%0A%0D%0AProject%20address%20or%20neighborhood%3A%0D%0AQuestions%3A%0D%0A%0D%0AThanks%2C">
           Email Jim (attach photos)
         </a>
         <a class="btn-primary" href="https://sanctuaryoutdoor.com/#questionnaire">Start Design Brief</a>
