@@ -483,14 +483,21 @@
     </section>
 
     <!-- Problems section -->
-    <section id="problems">
-      <h2 class="section-title">Why full bubblers cause problems in Kingman yards</h2>
+        <!-- DETAILS ACCORDION -->
+    <section id="irrigation-details" style="margin-top:3rem;">
+      <h2 class="section-title">Mini-bubbler irrigation in Kingman: common problems, fixes, and what we check</h2>
       <p class="section-subtitle">
-        Mini bubblers solve the middle ground between drip and full bubbler systems. We often see excessive flow on desert
-        foliage, tree irrigation Kingman AZ zones flooding, and irrigation zones watering wrong plants because the fittings
-        do not match plant size.
+        Expand a section below. Only one stays open at a time so the page stays easy to scan.
       </p>
-      <div class="grid">
+
+      <div class="accordion-group" data-accordion-group="main">
+        <div class="accordion-item" id="problems">
+          <button class="accordion-button" type="button" aria-expanded="false" aria-controls="panel-why">
+            Why full bubblers cause problems in Kingman yards
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="panel-why" role="region" aria-label="Why full bubblers cause problems">
+            <div class="grid">
         <div class="card">
           <h3>Plants getting too much water</h3>
           <p>
@@ -516,16 +523,17 @@
           </p>
         </div>
       </div>
-    </section>
+    
+          </div>
+        </div>
 
-    <!-- Solutions section -->
-    <section id="solutions">
-      <h2 class="section-title">Mini bubbler irrigation Kingman solutions</h2>
-      <p class="section-subtitle">
-        We evaluate your irrigation pressure regulation, anti siphon irrigation valve setup, and base flow. Then we retrofit
-        full bubblers to mini bubblers using adapters, and adjust timing so trees get deep watering without flooding.
-      </p>
-      <div class="grid">
+        <div class="accordion-item" id="solutions">
+          <button class="accordion-button" type="button" aria-expanded="false" aria-controls="panel-solutions">
+            Mini bubbler irrigation Kingman solutions
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="panel-solutions" role="region" aria-label="Mini bubbler solutions">
+            <div class="grid">
         <div class="card">
           <h3>Mini bubbler retrofit</h3>
           <p>
@@ -551,23 +559,30 @@
           </p>
         </div>
       </div>
-    </section>
+    
+          </div>
+        </div>
 
-    <!-- Process section -->
-    <section>
-      <h2 class="section-title">How we evaluate your irrigation system</h2>
-      <p class="section-subtitle">
-        We look at plant type, zone layout, and delivery method. If drip irrigation for trees Kingman is the right choice,
-        we balance emitters and mini bubblers to keep trees healthy. If the zone needs a full retrofit, we map the right solution.
-      </p>
-      <div class="card">
+        <div class="accordion-item" id="evaluate">
+          <button class="accordion-button" type="button" aria-expanded="false" aria-controls="panel-evaluate">
+            How we evaluate your irrigation system
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="panel-evaluate" role="region" aria-label="How we evaluate your irrigation system">
+            <div class="card">
         <h3>On-site check</h3>
         <p>
           We inspect irrigation contractor Kingman essentials: flow, pressure, anti siphon irrigation valve performance,
           and the correct fittings for each plant.
         </p>
       </div>
+    
+          </div>
+        </div>
+      </div>
     </section>
+
+
 
     <!-- FAQ section -->
     <section id="faq">
@@ -646,24 +661,49 @@
 
   <!-- Page scripts -->
   <script>
-    // Accordion logic: allow only one open at a time.
-    document.querySelectorAll('.accordion-item').forEach(item => {
-      const button = item.querySelector('.accordion-button');
-      if (!button) return;
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.accordion-item').forEach(other => {
-          if (other !== item) {
-            other.classList.remove('open');
-            const otherButton = other.querySelector('.accordion-button');
-            if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
-          }
-        });
-        const isOpen = item.classList.toggle('open');
-        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        // Accordion logic: allow only one open at a time (per accordion-group) and start closed.
+    (function () {
+      // Force closed state on load (prevents accidental "all open" states)
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('open');
+        const btn = item.querySelector('.accordion-button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        const icon = item.querySelector('.accordion-icon');
+        if (icon) icon.textContent = '+';
       });
-    });
 
-    // Update footer year.
+      document.querySelectorAll('.accordion-group').forEach(group => {
+        const items = Array.from(group.querySelectorAll('.accordion-item'));
+
+        items.forEach(item => {
+          const button = item.querySelector('.accordion-button');
+          if (!button) return;
+
+          button.addEventListener('click', () => {
+            const wasOpen = item.classList.contains('open');
+
+            // Close all in this group
+            items.forEach(other => {
+              other.classList.remove('open');
+              const otherButton = other.querySelector('.accordion-button');
+              if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
+              const otherIcon = other.querySelector('.accordion-icon');
+              if (otherIcon) otherIcon.textContent = '+';
+            });
+
+            // Toggle this one
+            if (!wasOpen) {
+              item.classList.add('open');
+              button.setAttribute('aria-expanded', 'true');
+              const icon = item.querySelector('.accordion-icon');
+              if (icon) icon.textContent = '–';
+            }
+          });
+        });
+      });
+    })();
+
+// Update footer year.
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   </script>
