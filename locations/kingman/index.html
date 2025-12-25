@@ -163,7 +163,7 @@
 </head>
 
 <body>
-  <!-- Header: add home link + keep design brief accessible -->
+  <!-- Header: add home link + questionnaire access -->
   <header>
     <div class="nav">
       <div class="logo-wrap">
@@ -173,14 +173,14 @@
       <nav>
         <a href="https://sanctuaryoutdoor.com/">Home</a>
         <a href="#services">Services</a>
-        <a href="#questionnaire">Questionnaire</a>
+        <a href="https://sanctuaryoutdoor.com/#questionnaire">Questionnaire</a>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#service-areas">Service Areas</a>
         <!-- NEW: Kingman flooding/drainage landing page link -->
         <a href="/locations/kingman/" title="Backyard flooding and drainage in Kingman, AZ">Kingman Drainage</a>
 
-        <a class="btn-primary" href="#questionnaire">Start Your Design Brief</a>
+        <a class="btn-primary" href="https://sanctuaryoutdoor.com/#questionnaire">Start Your Design Brief</a>
       </nav>
     </div>
   </header>
@@ -199,7 +199,7 @@
           Serving Kingman, Golden Valley, Bullhead City, Fort Mohave, Hualapai, and Lake Havasu City, Arizona.
         </p>
         <div style="margin-top: 1.2rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
-          <a class="btn-primary" href="#questionnaire">Start Your Design Questionnaire</a>
+          <a class="btn-primary" href="https://sanctuaryoutdoor.com/#questionnaire">Start Your Design Questionnaire</a>
           <a class="btn-secondary" href="https://sanctuaryoutdoor.com/locations/kingman/kingman-backyard-drainage/" style="text-decoration:none;">Kingman Flooding Help</a>
         </div>
       </div>
@@ -248,52 +248,6 @@
       </p>
     </section>
 
-    <!-- Design questionnaire: on-page brief to avoid submission errors -->
-    <section id="questionnaire">
-      <h2 class="section-title">Your Design Questionnaire</h2>
-      <p class="section-subtitle">
-        Share your goals and preferences. This opens an email draft so you can attach photos and send your brief.
-      </p>
-
-      <form class="questionnaire" id="designBriefForm">
-        <!-- Honeypot -->
-        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <div class="field">
-          <input name="name" type="text" placeholder="Full name" required />
-        </div>
-        <div class="field">
-          <input name="email" type="email" placeholder="Email address" required />
-        </div>
-        <div class="field">
-          <input name="phone" type="tel" placeholder="Phone (optional)" />
-        </div>
-        <div class="field">
-          <input name="location" type="text" placeholder="Project location (Kingman neighborhood or cross streets)" />
-        </div>
-        <div class="field">
-          <select name="budget">
-            <option value="">Approximate investment range</option>
-            <option>$10k – $20k</option>
-            <option>$20k – $50k</option>
-            <option>$50k – $100k</option>
-            <option>$100k+</option>
-          </select>
-        </div>
-        <div class="field">
-          <textarea name="notes" placeholder="Tell us what you want to build, must-haves, and any timeline."></textarea>
-        </div>
-
-        <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-          <button class="btn-primary" type="submit">Send Design Brief</button>
-          <a class="btn-secondary" href="https://sanctuaryoutdoor.com/#questionnaire">Use Full Questionnaire</a>
-        </div>
-      </form>
-      <p style="font-size:0.8rem;color:#6b7280;margin-top:0.6rem;">
-        Submitting opens your email client so you can attach photos.
-      </p>
-    </section>
-
     <!-- Service areas: include home link -->
     <section id="service-areas" style="margin-top:3rem;">
       <h2 class="section-title">Service Areas</h2>
@@ -329,44 +283,10 @@
     </footer>
   </main>
 
-  <!-- Page scripts: footer year + design brief mailto -->
+  <!-- Page scripts: footer year -->
   <script>
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const designBriefForm = document.getElementById("designBriefForm");
-    if (designBriefForm) {
-      designBriefForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const honeypot = designBriefForm.querySelector('input[name="website"]');
-        if (honeypot && honeypot.value) return;
-
-        const name = designBriefForm.name.value.trim();
-        const email = designBriefForm.email.value.trim();
-        const phone = designBriefForm.phone.value.trim();
-        const location = designBriefForm.location.value.trim();
-        const budget = designBriefForm.budget.value.trim();
-        const notes = designBriefForm.notes.value.trim();
-
-        const subject = "Kingman Design Brief";
-        const bodyLines = [
-          "Name: " + name,
-          "Email: " + email,
-          "Phone: " + (phone || "N/A"),
-          "Location: " + (location || "N/A"),
-          "Budget: " + (budget || "N/A"),
-          "",
-          "Project notes:",
-          notes || "N/A"
-        ];
-
-        const mailto = "mailto:Jim@SanctuaryOutdoor.com"
-          + "?subject=" + encodeURIComponent(subject)
-          + "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-        window.location.href = mailto;
-      });
-    }
   </script>
 </body>
 </html>
