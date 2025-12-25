@@ -275,52 +275,6 @@
       </div>
     </section>
 
-    <!-- Design brief form (short email-based version) -->
-    <section id="questionnaire">
-      <h2 class="section-title">Design brief</h2>
-      <p class="section-subtitle">
-        Share your goals and photos. Submitting opens your email client so you can attach images and send your brief.
-      </p>
-
-      <form class="questionnaire" id="designBriefForm">
-        <!-- Honeypot -->
-        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <div class="field">
-          <input name="name" type="text" placeholder="Full name" required />
-        </div>
-        <div class="field">
-          <input name="email" type="email" placeholder="Email address" required />
-        </div>
-        <div class="field">
-          <input name="phone" type="tel" placeholder="Phone (optional)" />
-        </div>
-        <div class="field">
-          <input name="location" type="text" placeholder="Project location (Kingman neighborhood or cross streets)" />
-        </div>
-        <div class="field">
-          <select name="budget">
-            <option value="">Approximate investment range</option>
-            <option>$10k – $20k</option>
-            <option>$20k – $50k</option>
-            <option>$50k – $100k</option>
-            <option>$100k+</option>
-          </select>
-        </div>
-        <div class="field">
-          <textarea name="notes" placeholder="Tell us what you want to build, must-haves, and any timeline."></textarea>
-        </div>
-
-        <div class="cta-row">
-          <button class="btn-primary" type="submit">Send Design Brief</button>
-          <a class="btn-secondary" href="https://sanctuaryoutdoor.com/#questionnaire">Use Full Questionnaire</a>
-        </div>
-      </form>
-      <p class="small-note">
-        Submitting opens your email client so you can attach photos.
-      </p>
-    </section>
-
     <!-- Problems section -->
     <section id="problems">
       <h2 class="section-title">Why gravel yards fail without proper prep</h2>
@@ -328,44 +282,59 @@
         Rock is a finish material. When the base is wrong, you see rock landscaping drainage issues,
         standing water under landscape rock, and weeds growing through rock landscaping in Kingman.
       </p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Standing water under rock</h3>
-          <p>
-            Hidden low spots hold water and keep the subgrade soft. We correct slopes before rock is installed.
-          </p>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Standing water under rock</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Hidden low spots hold water and keep the subgrade soft. We correct slopes before rock is installed.
         </div>
-        <div class="card">
-          <h3>Weeds in decorative rock</h3>
-          <p>
-            Fines and organic debris settle in rock beds. Proper depth and weed barrier options reduce weeds.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Weeds in decorative rock</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Fines and organic debris settle in rock beds. Proper depth and weed barrier options reduce weeds.
         </div>
-        <div class="card">
-          <h3>Sinking gravel yard</h3>
-          <p>
-            Soft soil and improper compaction cause gravel to sink or shift. We compact and stabilize the base.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Sinking gravel yard</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Soft soil and improper compaction cause gravel to sink or shift. We compact and stabilize the base.
         </div>
-        <div class="card">
-          <h3>Muddy backyard Kingman</h3>
-          <p>
-            Dirt yards turn to mud after storms. Rock and gravel landscaping can create a low maintenance yard for dogs
-            and reduce kids tracking dirt into the house.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Muddy backyard Kingman</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Dirt yards turn to mud after storms. Rock and gravel landscaping can create a low maintenance yard for dogs
+          and reduce kids tracking dirt into the house.
         </div>
-        <div class="card">
-          <h3>Improper rock grading</h3>
-          <p>
-            Rock spread on uneven soil traps runoff near walls. We correct grade so water moves away from structures.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Improper rock grading</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Rock spread on uneven soil traps runoff near walls. We correct grade so water moves away from structures.
         </div>
-        <div class="card">
-          <h3>Weed barrier issues</h3>
-          <p>
-            Weed barrier can help, but only with correct base prep and drainage. We recommend the right approach per yard.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Weed barrier issues</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          Weed barrier can help, but only with correct base prep and drainage. We recommend the right approach per yard.
         </div>
       </div>
     </section>
@@ -378,27 +347,50 @@
         We focus on stable base work, clean edges, and long-term performance for gravel landscaping Kingman AZ projects.
       </p>
 
-      <div class="callout">
-        <strong>Drainage-first prep:</strong> We measure the yard surface, fix improper rock grading, and compact
-        the base before rock is spread. This prevents standing water under landscape rock and reduces weeds.
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>Drainage-first prep</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          We measure the yard surface, fix improper rock grading, and compact the base before rock is spread.
+          This prevents standing water under landscape rock and reduces weeds.
+        </div>
       </div>
-
-      <div class="grid" style="margin-top:1rem;">
-        <div class="card">
-          <h3>1) Site evaluation</h3>
-          <p>We review dirt yard conditions, drainage patterns, and existing problem areas in your rock yard Kingman AZ.</p>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>1) Site evaluation</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          We review dirt yard conditions, drainage patterns, and existing problem areas in your rock yard Kingman AZ.
         </div>
-        <div class="card">
-          <h3>2) Grading and compaction</h3>
-          <p>We correct slope and stabilize the subgrade to prevent sinking gravel yard problems.</p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>2) Grading and compaction</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          We correct slope and stabilize the subgrade to prevent sinking gravel yard problems.
         </div>
-        <div class="card">
-          <h3>3) Weed barrier options</h3>
-          <p>We install decorative rock with or without weed barrier and landscape fabric under rock based on drainage and maintenance goals.</p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>3) Weed barrier options</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          We install decorative rock with or without weed barrier and landscape fabric under rock based on drainage and maintenance goals.
         </div>
-        <div class="card">
-          <h3>4) Rock install</h3>
-          <p>We complete yard rock installation Kingman homeowners rely on for durable, clean, low maintenance yards.</p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" aria-expanded="false">
+          <span>4) Rock install</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          We complete yard rock installation Kingman homeowners rely on for durable, clean, low maintenance yards.
         </div>
       </div>
     </section>
@@ -520,41 +512,6 @@
   <script>
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const designBriefForm = document.getElementById("designBriefForm");
-    if (designBriefForm) {
-      designBriefForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const honeypot = designBriefForm.querySelector('input[name="website"]');
-        if (honeypot && honeypot.value) return;
-
-        const name = designBriefForm.name.value.trim();
-        const email = designBriefForm.email.value.trim();
-        const phone = designBriefForm.phone.value.trim();
-        const location = designBriefForm.location.value.trim();
-        const budget = designBriefForm.budget.value.trim();
-        const notes = designBriefForm.notes.value.trim();
-
-        const subject = "Kingman Rock & Gravel Design Brief";
-        const bodyLines = [
-          "Name: " + name,
-          "Email: " + email,
-          "Phone: " + (phone || "N/A"),
-          "Location: " + (location || "N/A"),
-          "Budget: " + (budget || "N/A"),
-          "",
-          "Project notes:",
-          notes || "N/A"
-        ];
-
-        const mailto = "mailto:Jim@SanctuaryOutdoor.com"
-          + "?subject=" + encodeURIComponent(subject)
-          + "&body=" + encodeURIComponent(bodyLines.join("\\n"));
-
-        window.location.href = mailto;
-      });
-    }
-
   </script>
   <!-- Accordion behavior -->
   <script src="/assets/js/accordion-one-open.js" defer></script>
