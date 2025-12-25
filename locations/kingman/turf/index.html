@@ -171,6 +171,15 @@
 
   <!-- Site-wide theme CSS (shared across pages) -->
   <link rel="stylesheet" href="/assets/css/site.css">
+  <!-- Mobile-only accordions: show condensed content on small screens -->
+  <style>
+    /* Hide mobile accordion sections on desktop; swap visibility at mobile breakpoint. */
+    .turf-mobile-only { display: none; }
+    @media (max-width: 768px) {
+      .turf-desktop-only { display: none; }
+      .turf-mobile-only { display: block; }
+    }
+  </style>
 </head>
 
 <body>
@@ -233,7 +242,8 @@
         Turf can be a smart, water-wise upgrade — especially when the turf area is intentionally defined, graded, and contained.
       </p>
 
-      <div class="services-grid">
+      <!-- Desktop layout: card grid -->
+      <div class="services-grid turf-desktop-only">
         <div class="card">
           <h3>1) Grade for drainage first</h3>
           <p>
@@ -272,6 +282,65 @@
           </p>
         </div>
       </div>
+
+      <!-- Mobile layout: accordion stack -->
+      <div class="turf-mobile-only">
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>1) Grade for drainage first</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Before turf goes down, we grade the area so water drains properly. This helps prevent pooling under the turf
+            and keeps monsoon runoff moving in the right direction.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>2) Build a flat, natural-feel base</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            A quality base makes turf feel “right” underfoot. It also helps keep the surface smooth over time.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>3) Add a clean border</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Borders keep turf crisp and contained. Many border choices work well in Kingman, including pavers and hardscape edges.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>4) Choose the right turf type</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Aside from color and texture, you may want pet turf. Pet turf is designed to drain more effectively and can stay more comfortable in direct sun.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>5) Pick the right infill</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Infill helps turf fibers stand up so it doesn’t look like “high-traffic carpet.” For pets, antimicrobial infill is a must to reduce odor.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button" type="button" aria-expanded="false">
+            <span>6) Make it water-wise</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Even with turf, grading and containment matter. We design the area so water goes where it should and doesn’t spread across the yard.
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA / CONTACT -->
@@ -295,7 +364,7 @@
       </div>
     </section>
 
-    <!-- PET TURF / PROBLEM SOLVED -->
+<!-- PET TURF / PROBLEM SOLVED -->
 <section id="pet-turf" style="margin-top:3rem;">
   <h2 class="section-title">Pet-Friendly Turf That Helps Keep Dirt Out of the House</h2>
   <p class="section-subtitle">
@@ -303,7 +372,8 @@
     Turf can be a clean, green solution when it’s installed on a properly graded base that drains.
   </p>
 
-  <div class="services-grid">
+  <!-- Desktop layout: card grid -->
+  <div class="services-grid turf-desktop-only">
     <div class="card">
       <h3>Dog run &amp; pet turf options</h3>
       <p>
@@ -326,6 +396,40 @@
       </p>
     </div>
   </div>
+
+  <!-- Mobile layout: accordion stack -->
+  <div class="turf-mobile-only">
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>Dog run &amp; pet turf options</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        We can spec <strong>pet turf</strong> (artificial grass for dogs) with drainage holes and odor-control infill.
+        Great for dog runs, side yards, and play zones.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>No mushy spots after rain</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        We grade for runoff, compact the base, and avoid low areas so your <strong>Kingman turf</strong> doesn’t turn into
+        soft, soggy pockets after monsoon storms.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>Edges, borders &amp; clean transitions</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        A defined border (pavers, metal edging, or concrete) keeps turf crisp and helps contain the base and infill—
+        especially near patios and high-traffic paths.
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FAQ -->
@@ -336,7 +440,8 @@
     and low-maintenance green yards in Kingman, AZ.
   </p>
 
-  <div class="services-grid">
+  <!-- Desktop layout: card grid -->
+  <div class="services-grid turf-desktop-only">
     <div class="card">
       <h3>How long does artificial turf last?</h3>
       <p>
@@ -371,6 +476,60 @@
         Cost depends on square footage, access, existing soil conditions, and the turf system selected (standard vs.
         pet turf, infill type, and border choices). We’ll quote it clearly before work begins.
       </p>
+    </div>
+  </div>
+
+  <!-- Mobile layout: accordion stack -->
+  <div class="turf-mobile-only">
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>How long does artificial turf last?</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        With the right base prep and installation, quality turf can look great for many years. We focus on
+        proper grading, compaction, and edging — the details that make turf last.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>Do you install pet turf for dogs?</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        Yes. We can design a <strong>dog-friendly turf</strong> area with drainage holes, easy-clean access,
+        and an odor-control infill option if you have pets.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>Will turf drain during monsoon storms?</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        Turf only drains as well as what’s under it. We grade the area to shed water, then install a compacted
+        base so water flows the direction it’s supposed to go.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>Do I need a border around turf?</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        Strongly recommended. Borders keep edges tight, protect against lifting, and create a clean transition
+        to rock, concrete, or pavers.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" aria-expanded="false">
+        <span>What does turf installation cost in Kingman?</span>
+        <span>+</span>
+      </button>
+      <div class="accordion-content">
+        Cost depends on square footage, access, existing soil conditions, and the turf system selected (standard vs.
+        pet turf, infill type, and border choices). We’ll quote it clearly before work begins.
+      </div>
     </div>
   </div>
 </section>
@@ -414,5 +573,7 @@
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   </script>
+  <!-- Accordion behavior: one open at a time -->
+  <script src="/assets/js/accordion-one-open.js" defer></script>
 </body>
 </html>
