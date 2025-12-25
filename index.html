@@ -330,53 +330,128 @@
 
         <!-- Step 1 -->
         <div class="question-step active" data-step="1">
-          <div class="question-title">1. What overall feel are you drawn to?</div>
-          <div class="question-help">Choose the styles that feel most like “you.”</div>
+          <div class="question-title">1. Design survey header</div>
+          <div class="question-help">We are a small business and do not have outgoing campaigns.</div>
+          <div class="question-help">Required: Name, City, and at least one contact method.</div>
+          <div class="question-help">Preferred response method (choose at least one).</div>
           <div class="option-grid">
-            <div class="option-tile" data-field="style" data-value="modern-minimal">
-              Clean, modern, minimal
+            <div class="option-tile" data-field="response" data-value="text">
+              Text
             </div>
-            <div class="option-tile" data-field="style" data-value="lush-resort">
-              Lush, resort-style retreat
+            <div class="option-tile" data-field="response" data-value="phone">
+              Phone
             </div>
-            <div class="option-tile" data-field="style" data-value="mediterranean">
-              Mediterranean / European
+            <div class="option-tile" data-field="response" data-value="email">
+              Email
             </div>
-            <div class="option-tile" data-field="style" data-value="organic-natural">
-              Organic, natural, woodland
-            </div>
+          </div>
+          <div class="field">
+            <input name="name" type="text" placeholder="Name (required)" required />
+          </div>
+          <div class="field">
+            <input name="phone" type="tel" placeholder="Phone (text or phone)" />
+          </div>
+          <div class="question-help">Use the same number for text or phone.</div>
+          <div class="field">
+            <input name="email" type="email" placeholder="Email" />
+          </div>
+          <div class="field">
+            <input name="city" type="text" placeholder="City (required)" required />
+          </div>
+          <div class="question-help">
+            Note: It may take a couple hours to get back to you depending on if we are speaking with another client
+            or currently driving a tractor in someone's yard.
           </div>
         </div>
 
         <!-- Step 2 -->
         <div class="question-step" data-step="2">
-          <div class="question-title">2. Which features excite you?</div>
-          <div class="question-help">Select all that you’re considering.</div>
+          <div class="question-title">2. Overall feel</div>
+          <div class="question-help">Use a couple words like our current screen.</div>
+          <div class="question-help">You can choose more than one.</div>
           <div class="option-grid">
-            <div class="option-tile" data-field="features" data-value="pool-spa">
-              Pool or spa
+            <div class="option-tile" data-field="overall-feel" data-value="desert-low-water">
+              Desert-friendly and low water
             </div>
-            <div class="option-tile" data-field="features" data-value="outdoor-kitchen">
-              Outdoor kitchen / bar
+            <div class="option-tile" data-field="overall-feel" data-value="organic-natural-textures">
+              Organic and natural textures
             </div>
-            <div class="option-tile" data-field="features" data-value="fire-feature">
-              Fireplace / fire pit
+            <div class="option-tile" data-field="overall-feel" data-value="modern-clean-lines">
+              Modern lines and clean edges
             </div>
-            <div class="option-tile" data-field="features" data-value="covered-structure">
-              Covered structure / pergola
+            <div class="option-tile" data-field="overall-feel" data-value="lush-layered-planting">
+              Lush and green with layered planting
             </div>
-            <div class="option-tile" data-field="features" data-value="seating-dining">
-              Lounge & dining zones
+            <div class="option-tile" data-field="overall-feel" data-value="mediterranean-warm-stone">
+              Mediterranean warmth and stone accents
             </div>
-            <div class="option-tile" data-field="features" data-value="low-maintenance">
-              Low-maintenance planting
+            <div class="option-tile" data-field="overall-feel" data-value="shaded-cool-areas">
+              Shaded and cool outdoor areas
+            </div>
+            <div class="option-tile" data-field="overall-feel" data-value="privacy-retreat">
+              Privacy-focused retreat
+            </div>
+            <div class="option-tile" data-field="overall-feel" data-value="wind-protected-zones">
+              Wind-protected zones and screens
             </div>
           </div>
         </div>
 
         <!-- Step 3 -->
         <div class="question-step" data-step="3">
-          <div class="question-title">3. How would you describe your investment comfort level?</div>
+          <div class="question-title">3. Interested in adding or updating</div>
+          <div class="question-help">You can choose more than one.</div>
+          <div class="option-grid">
+            <div class="option-tile" data-field="interests" data-value="irrigation-drip-to-sprinkler">
+              Irrigation (drip to full sprinkler system)
+            </div>
+            <div class="option-tile" data-field="interests" data-value="ground-cover-rock-to-grass">
+              Ground cover (rock to natural grass)
+            </div>
+            <div class="option-tile" data-field="interests" data-value="patio-concrete-to-flagstone">
+              Patio (concrete to flagstone)
+            </div>
+            <div class="option-tile" data-field="interests" data-value="extend-driveway-rv-pickleball">
+              Extend driveway (RV to pickle ball court)
+            </div>
+            <div class="option-tile" data-field="interests" data-value="grading-drainage-pitch-to-sump">
+              Grading and drainage (correct pitch to sump pumps and drain pipe)
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="question-step" data-step="4">
+          <div class="question-title">4. Which features excite you?</div>
+          <div class="question-help">You can choose more than one.</div>
+          <div class="option-grid">
+            <div class="option-tile" data-field="features" data-value="outdoor-kitchen">
+              Outdoor kitchen
+            </div>
+            <div class="option-tile" data-field="features" data-value="patio-bar">
+              Patio bar
+            </div>
+            <div class="option-tile" data-field="features" data-value="pergola">
+              Pergola
+            </div>
+            <div class="option-tile" data-field="features" data-value="lighting">
+              Lighting
+            </div>
+            <div class="option-tile" data-field="features" data-value="fire-pit">
+              Fire pit
+            </div>
+            <div class="option-tile" data-field="features" data-value="water-feature">
+              Water feature
+            </div>
+            <div class="option-tile" data-field="features" data-value="shed">
+              Shed
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="question-step" data-step="5">
+          <div class="question-title">5. Budget</div>
           <div class="question-help">This helps us propose realistic options. Ranges are approximate.</div>
           <select name="budget">
             <option value="">Select an approximate range</option>
@@ -387,27 +462,22 @@
           </select>
           <div style="margin-top: 0.7rem;">
             <label style="font-size: 0.85rem; color: #6b7280;">
-              Anything we should know about your priorities around investment and timing?
-              <textarea name="budgetNotes" placeholder="For example: we may phase the project over 2–3 years."></textarea>
+              Budget or timeline notes
+              <textarea name="budgetNotes" placeholder="Within 3 months / phased approach over 2 years?"></textarea>
             </label>
           </div>
         </div>
 
-        <!-- Step 4 -->
-        <div class="question-step" data-step="4">
-          <div class="question-title">4. Tell us about your property & how to contact you.</div>
-          <div class="question-help">We’ll review your brief and respond personally with next steps.</div>
+        <!-- Step 6 -->
+        <div class="question-step" data-step="6">
+          <div class="question-title">6. Anything else on your mind?</div>
+          <div class="question-help">Share any details you want us to know.</div>
           <div class="field">
-            <input name="name" type="text" placeholder="Full name" required />
+            <textarea name="notes" placeholder="Anything else on your mind that you would like to share?"></textarea>
           </div>
-          <div class="field">
-            <input name="email" type="email" placeholder="Email address" required />
-          </div>
-          <div class="field">
-            <input name="location" type="text" placeholder="Project location (city / neighborhood)" />
-          </div>
-          <div class="field">
-            <textarea name="notes" placeholder="Anything else you’d like us to know about your home, family, or how you’d love to use the space?"></textarea>
+          <div class="question-help">
+            We will send a confirmation email with a link to our contact card so you can reach us instead of the other way around.
+            You can reply to the email with photos attached, and a person will review them before getting back to you.
           </div>
         </div>
 
@@ -857,7 +927,8 @@
     document.querySelectorAll(".option-tile").forEach(tile => {
       tile.addEventListener("click", () => {
         const field = tile.dataset.field;
-        const isMulti = field === "features";
+        const multiFields = new Set(["response", "overall-feel", "interests", "features"]);
+        const isMulti = multiFields.has(field);
 
         if (!isMulti) {
           document.querySelectorAll(`.option-tile[data-field="${field}"]`).forEach(t => {
@@ -869,24 +940,31 @@
     });
 
     function collectQuestionnaireValues() {
-      const styleTiles = [...document.querySelectorAll('.option-tile[data-field="style"].selected')];
+      const responseTiles = [...document.querySelectorAll('.option-tile[data-field="response"].selected')];
+      const feelTiles = [...document.querySelectorAll('.option-tile[data-field="overall-feel"].selected')];
+      const interestTiles = [...document.querySelectorAll('.option-tile[data-field="interests"].selected')];
       const featureTiles = [...document.querySelectorAll('.option-tile[data-field="features"].selected')];
 
-      const style = styleTiles.map(t => t.dataset.value).join(", ");
+      const responseMethods = responseTiles.map(t => t.dataset.value).join(", ");
+      const overallFeel = feelTiles.map(t => t.dataset.value).join(", ");
+      const interests = interestTiles.map(t => t.dataset.value).join(", ");
       const features = featureTiles.map(t => t.dataset.value).join(", ");
 
       const templateParams = {
         name: questionnaireForm.name.value,
         email: questionnaireForm.email.value,
-        location: questionnaireForm.location.value,
+        phone: questionnaireForm.phone.value,
+        city: questionnaireForm.city.value,
         notes: questionnaireForm.notes.value,
         budget: questionnaireForm.budget.value,
         budgetNotes: questionnaireForm.budgetNotes.value,
-        style: style,
+        responseMethods: responseMethods,
+        overallFeel: overallFeel,
+        interests: interests,
         features: features
       };
 
-      return { templateParams, styleTiles, featureTiles };
+      return { templateParams, responseTiles, feelTiles, interestTiles, featureTiles };
     }
 
     if (nextBtn && prevBtn && questionnaireForm) {
@@ -905,8 +983,19 @@
 
           const { templateParams } = collectQuestionnaireValues();
 
-          if (!templateParams.style && !templateParams.features) {
-            alert("Please select at least one style or feature so we can better understand your preferences.");
+          // Required contact validation for questionnaire submissions.
+          if (!templateParams.responseMethods) {
+            alert("Please select at least one preferred response method.");
+            return;
+          }
+
+          if (!templateParams.name || !templateParams.city) {
+            alert("Please provide your name and city.");
+            return;
+          }
+
+          if (!templateParams.phone && !templateParams.email) {
+            alert("Please provide a phone number or email address.");
             return;
           }
 
