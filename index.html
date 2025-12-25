@@ -220,6 +220,40 @@
   <!-- Site-wide theme CSS (shared across pages) -->
   <link rel="stylesheet" href="/assets/css/site.css">
 
+  <!-- Form styling: compact contact method options for questionnaire -->
+  <style>
+    .question-choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 0.4rem 0 0.8rem;
+    }
+
+    .question-choice {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .question-choice input {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #111827;
+      border-radius: 999px;
+      display: inline-block;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .question-choice input:checked {
+      background: #111827;
+      box-shadow: inset 0 0 0 4px #ffffff;
+    }
+  </style>
+
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -334,16 +368,19 @@
           <div class="question-help">We are a small business and do not have outgoing campaigns.</div>
           <div class="question-help">Required: Name, City, and at least one contact method.</div>
           <div class="question-help">Preferred response method (choose at least one).</div>
-          <div class="option-grid">
-            <div class="option-tile" data-field="response" data-value="text">
+          <div class="question-choice-row">
+            <label class="question-choice">
+              <input type="checkbox" name="responseMethods" value="Text" />
               Text
-            </div>
-            <div class="option-tile" data-field="response" data-value="phone">
+            </label>
+            <label class="question-choice">
+              <input type="checkbox" name="responseMethods" value="Phone" />
               Phone
-            </div>
-            <div class="option-tile" data-field="response" data-value="email">
+            </label>
+            <label class="question-choice">
+              <input type="checkbox" name="responseMethods" value="Email" />
               Email
-            </div>
+            </label>
           </div>
           <div class="field">
             <input name="name" type="text" placeholder="Name (required)" required />
@@ -871,6 +908,11 @@
       <div style="margin-top:0.3rem;">
         Ready to talk? Email us at <a href="mailto:Jim@sanctuaryoutdoor.com">Jim@SanctuaryOutdoor.com</a>.
       </div>
+      <!-- Footer actions: mobile-only call + contact card download -->
+      <div class="footer-actions">
+        <a class="btn-primary call-mobile" href="tel:+14809150026">Call</a>
+        <a class="btn-secondary call-mobile" href="/contact.vcf">Add to Contacts</a>
+      </div>
       <div style="margin-top:0.3rem;">
         Images are protected &amp; watermarked. Use without permission is prohibited.
       </div>
@@ -927,7 +969,7 @@
     document.querySelectorAll(".option-tile").forEach(tile => {
       tile.addEventListener("click", () => {
         const field = tile.dataset.field;
-        const multiFields = new Set(["response", "overall-feel", "interests", "features"]);
+        const multiFields = new Set(["overall-feel", "interests", "features"]);
         const isMulti = multiFields.has(field);
 
         if (!isMulti) {
@@ -940,12 +982,12 @@
     });
 
     function collectQuestionnaireValues() {
-      const responseTiles = [...document.querySelectorAll('.option-tile[data-field="response"].selected')];
+      const responseInputs = [...document.querySelectorAll('input[name="responseMethods"]:checked')];
       const feelTiles = [...document.querySelectorAll('.option-tile[data-field="overall-feel"].selected')];
       const interestTiles = [...document.querySelectorAll('.option-tile[data-field="interests"].selected')];
       const featureTiles = [...document.querySelectorAll('.option-tile[data-field="features"].selected')];
 
-      const responseMethods = responseTiles.map(t => t.dataset.value).join(", ");
+      const responseMethods = responseInputs.map(input => input.value).join(", ");
       const overallFeel = feelTiles.map(t => t.dataset.value).join(", ");
       const interests = interestTiles.map(t => t.dataset.value).join(", ");
       const features = featureTiles.map(t => t.dataset.value).join(", ");
@@ -964,7 +1006,7 @@
         features: features
       };
 
-      return { templateParams, responseTiles, feelTiles, interestTiles, featureTiles };
+      return { templateParams, responseInputs, feelTiles, interestTiles, featureTiles };
     }
 
     if (nextBtn && prevBtn && questionnaireForm) {
