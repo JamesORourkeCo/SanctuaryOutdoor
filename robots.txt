@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 
 # We do not block images or any assets.
+# Block query-based search URLs that are not supported on the site.
+Disallow: /*?q=
 
 Sitemap: https://sanctuaryoutdoor.com/sitemap.xml
