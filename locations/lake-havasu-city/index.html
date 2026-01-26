@@ -40,28 +40,82 @@
        LAKE HAVASU CITY JSON-LD SCHEMA
   ============================== -->
 
-  <!-- Local Business -->
+  <!-- LandscapingBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "LandscapingBusiness"],
+    "@type": "LandscapingBusiness",
     "@id": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/#business",
-    "name": "Sanctuary Outdoor – 3D Render & Build Co.",
+    "name": "Sanctuary Outdoor — 3D Render & Build Co.",
     "url": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/",
     "description": "3D landscape design, architectural 2D drawings, drainage planning, and wind-conscious outdoor structures for Lake Havasu City, AZ.",
     "image": "https://sanctuaryoutdoor.com/projects/1200dpi/img1/021.jpg",
-    "telephone": "+1-480-915-0026",
+    "telephone": "(480) 915-0026",
     "email": "Jim@SanctuaryOutdoor.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "10632 N Scottsdale Rd. #105",
-      "addressLocality": "Scottsdale",
+      "streetAddress": "3880 Stockton Hill Rd Ste 103 #270",
+      "addressLocality": "Kingman",
       "addressRegion": "AZ",
-      "postalCode": "85254",
+      "postalCode": "86409",
       "addressCountry": "US"
     },
-    "areaServed": "Lake Havasu City, AZ",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.1895,
+      "longitude": -114.0530
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Lake Havasu City",
+        "containedIn": "Arizona"
+      },
+      {
+        "@type": "City",
+        "name": "Kingman",
+        "containedIn": "Arizona"
+      },
+      {
+        "@type": "City",
+        "name": "Bullhead City",
+        "containedIn": "Arizona"
+      },
+      {
+        "@type": "City",
+        "name": "Golden Valley",
+        "containedIn": "Arizona"
+      },
+      {
+        "@type": "City",
+        "name": "Fort Mohave",
+        "containedIn": "Arizona"
+      },
+      {
+        "@type": "City",
+        "name": "Hualapai",
+        "containedIn": "Arizona"
+      }
+    ],
     "priceRange": "$$"
+  }
+  </script>
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/#webpage",
+    "url": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/",
+    "name": "Lake Havasu City, AZ Landscape Design & 3D Outdoor Living | Sanctuary Outdoor",
+    "description": "3D landscape design, architectural plans, drainage planning, and wind-conscious outdoor structures for Lake Havasu City, AZ. See your future outdoor living space in 3D before construction begins.",
+    "isPartOf": {
+      "@id": "https://sanctuaryoutdoor.com/#website"
+    },
+    "about": {
+      "@id": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/#business"
+    }
   }
   </script>
 
@@ -90,22 +144,6 @@
         "item": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/"
       }
     ]
-  }
-  </script>
-
-  <!-- Service Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "3D Landscape Design & Outdoor Living",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Sanctuary Outdoor – 3D Render & Build Co.",
-      "url": "https://sanctuaryoutdoor.com/"
-    },
-    "areaServed": "Lake Havasu City, AZ",
-    "url": "https://sanctuaryoutdoor.com/locations/lake-havasu-city/"
   }
   </script>
 
@@ -148,13 +186,10 @@
         <div class="hero-highlight">Lake Havasu City, Arizona · 3D landscape design & outdoor living</div>
         <h1>Lake Havasu City Landscape Design & Outdoor Living Spaces</h1>
         <p>
-          Sanctuary Outdoor provides high-end 3D landscape design and outdoor living concepts throughout
-          Lake Havasu City and nearby river and desert communities. We use photo-realistic 3D images so you
-          can accurately preview your future outdoor space before construction begins.
+          Sanctuary Outdoor provides high-end 3D landscape design and outdoor living concepts serving Lake Havasu City, Kingman, Bullhead City, and surrounding northwest Arizona communities. We use photo-realistic 3D images so you can accurately preview your future outdoor space before construction begins.
         </p>
         <p style="color:#4b5563;font-size:0.9rem;margin-top:0.5rem;">
-          From master-planned neighborhoods near the lake to semi-rural properties with slope, RV parking, and
-          boat storage, we design spaces that respect real drainage, wind, and everyday use.
+          From master-planned neighborhoods near the lake to semi-rural properties with slope, RV parking, and boat storage, we design spaces that respect real drainage, wind, and everyday use.
         </p>
         <div style="margin-top: 1.2rem;">
           <button class="btn-primary" type="button" onclick="window.location.href='/#questionnaire';">
@@ -165,8 +200,7 @@
       <div class="hero-card">
         <h2>Render-first, engineered outdoor living</h2>
         <p>
-          Every Lake Havasu City project combines 3D visualization, architectural 2D plans, drainage-aware
-          planning, and wind-conscious construction—so your outdoor space looks beautiful and performs in real weather.
+          Every Lake Havasu City project combines 3D visualization, architectural 2D plans, drainage-aware planning, and wind-conscious construction—so your outdoor space looks beautiful and performs in real weather.
         </p>
         <div class="chip-row">
           <div class="chip">3D landscape design</div>
@@ -185,206 +219,152 @@
       <div class="two-col">
         <div>
           <p class="section-subtitle">
-            Lake Havasu City brings a unique combination of waterfront living, desert climate,
-            steep elevation transitions, and extreme heat. Many homes sit on sloped lots with
-            retaining walls, engineered pads, and narrow side yards—requiring careful design beyond
-            basic landscaping standards.
+            We start with high-fidelity 3D renders—not mood boards or vague sketches. You see what your space will actually look like, not a designer's interpretation.
           </p>
-          <p style="font-size:0.9rem;color:#4b5563;">
-            Homeowners who choose Sanctuary Outdoor typically want:
+          <h3>Your exact outdoor space, previewed in photo-realistic 3D</h3>
+          <p>
+            We don't just create loose concepts—we build full 3D renderings of your actual property. You can approve or adjust the design before construction begins, avoiding costly surprises or mid-project changes.
           </p>
-          <ul style="font-size:0.9rem;color:#4b5563;padding-left:1.1rem;">
-            <li>Photo-realistic 3D concepts before any construction</li>
-            <li>Accurate proposals with clearly defined scope—no hidden surprises</li>
-            <li>Drainage and grading that handle hillside runoff and monsoon storms</li>
-            <li>Pergolas and structures that withstand sustained high winds</li>
-            <li>Architectural 2D drawings for pricing, layout, and permitting</li>
-            <li>One team to guide design, documentation, and build management</li>
-          </ul>
+          <h3>Every layout begins with real drainage planning</h3>
+          <p>
+            Lake Havasu City properties—especially hillside and semi-rural lots—often have elevation changes, unpredictable runoff, and drainage challenges. We address grading and water flow before finalizing the design, not as an afterthought.
+          </p>
+          <h3>Clear proposals with exact scope and materials</h3>
+          <p>
+            Our proposals specify every material, installation method, and structural detail. You know what you're getting—no gray areas, no vague "we'll figure it out later" language.
+          </p>
+          <h3>Structures built for extreme desert wind</h3>
+          <p>
+            Lake Havasu City sees strong gusts year-round. We select pergolas, shade structures, and outdoor fixtures that are designed for high wind loads and install them according to manufacturer or engineered specifications.
+          </p>
         </div>
-
-        <div class="highlight-card">
-          <strong>At a glance: what’s different about us</strong>
-          <ul>
-            <li>3D-first design process</li>
-            <li>Elevation + drainage mapping for hillside lots</li>
-            <li>Wind-rated structural detailing for shade structures</li>
-            <li>Architectural 2D plans created in-house</li>
-            <li>Design–build oversight for seamless execution</li>
-          </ul>
+        <div>
+          <picture>
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img1/021.jpg">
+            <img src="/projects/1200dpi/img1/021.jpg" alt="3D landscape rendering showing pool-centered outdoor living design for Lake Havasu City Arizona backyard" fetchpriority="high">
+          </picture>
+          <div>High-fidelity 3D render showing a pool-centered outdoor living design in Lake Havasu City.</div>
         </div>
       </div>
     </section>
 
-    <!-- TECHNICAL SECTIONS (ACCORDION) -->
+    <!-- HOW WE WORK -->
     <section>
-      <h2 class="section-title">How we design for Lake Havasu City conditions</h2>
+      <h2 class="section-title">Our design and build process</h2>
       <p class="section-subtitle">
-        Below are technical planning considerations that commonly influence outdoor living projects
-        in Lake Havasu City—including heat, wind, drainage, and hillside lot engineering.
+        We combine 3D visualization, architectural precision, and real-world construction experience to deliver outdoor projects that look exactly like the approved renderings.
       </p>
 
-      <div class="accordion-group">
-        <!-- DRAINAGE & ELEVATION -->
-        <div class="accordion-item">
-          <button class="accordion-header" type="button">
-            <span class="label">Drainage &amp; elevation mapping for hillside lots</span>
-            <span class="icon">›</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <p>
-                Many Lake Havasu City homes are built on engineered pads with steep slopes behind or
-                beside the property. This affects how water moves, how retaining walls handle runoff,
-                and how new hardscape changes existing drainage patterns.
-              </p>
-
-              <p><strong>Common LHC drainage challenges:</strong></p>
-              <ul>
-                <li>Runoff traveling from uphill properties directly into backyards</li>
-                <li>Retaining walls that create trapped low points after heavy rain</li>
-                <li>Side yards with insufficient fall for proper flow</li>
-                <li>Sloped driveways that push stormwater toward the home</li>
-              </ul>
-
-              <p>
-                Our elevation measurements identify where water naturally moves, how the lot was engineered,
-                and what adjustments prevent flooding, pooling, or erosion. Drainage is integrated from day
-                one—ensuring your outdoor living space performs as well as it looks.
-              </p>
-            </div>
-          </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3>Design Questionnaire & Concept Consultation</h3>
+          <p>
+            You start by completing a design questionnaire that captures your goals, aesthetic preferences, functional requirements, and budget expectations.
+          </p>
+          <p>
+            We review your responses and schedule a project consultation to discuss layout options, drainage considerations, structural features, and design direction.
+          </p>
         </div>
 
-        <!-- WIND STRUCTURAL -->
-        <div class="accordion-item">
-          <button class="accordion-header" type="button">
-            <span class="label">Wind-rated structures for extreme desert winds</span>
-            <span class="icon">›</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <p>
-                Lake Havasu City experiences long-lasting wind events strong enough to stress
-                pergolas, patio covers, and masonry walls. Many shade structures fail because
-                they were installed without proper anchoring or engineering.
-              </p>
-
-              <p><strong>Our structural standards include:</strong></p>
-              <ul>
-                <li>Engineered-style footings sized for local wind load</li>
-                <li>High-grade steel connectors and uplift-resistant anchors</li>
-                <li>Manufacturer-certified installation for warranty protection</li>
-                <li>Architectural drawings for structures requiring permits</li>
-              </ul>
-
-              <p>
-                Whether it's an aluminum pergola, steel shade structure, or custom bar roof,
-                our priority is long-term performance in harsh weather.
-              </p>
-            </div>
-          </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>3D Rendering & Layout Approval</h3>
+          <p>
+            We create a high-fidelity 3D rendering of your property with the proposed design. You see exactly what the finished space will look like—including materials, textures, colors, and layout.
+          </p>
+          <p>
+            If adjustments are needed, we revise the rendering until you're completely satisfied with the design direction.
+          </p>
         </div>
 
-        <!-- 3D + 2D DESIGN SYSTEM -->
-        <div class="accordion-item">
-          <button class="accordion-header" type="button">
-            <span class="label">3D concept design + architectural 2D plans</span>
-            <span class="icon">›</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <p>Our dual-phase system gives homeowners total clarity:</p>
-
-              <p><strong>Phase 1 — 3D Concept Design</strong></p>
-              <p>
-                We create photo-realistic 3D images showing the complete outdoor environment—shade, lighting,
-                textures, nighttime views, and how the layout flows with your home and hillside surroundings.
-              </p>
-
-              <p><strong>Phase 2 — Architectural 2D Drawings</strong></p>
-              <p>
-                After the 3D design is approved, we produce architectural-grade 2D plans that include:
-              </p>
-
-              <ul>
-                <li>Proportional layout diagrams</li>
-                <li>Dimensions and area calculations</li>
-                <li>Drainage patterns and elevations</li>
-                <li>Structural notes and material callouts</li>
-              </ul>
-
-              <p>These are essential for accurate proposals, construction, and—when required—permitting.</p>
-            </div>
-          </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>Architectural Plans & Structural Documentation</h3>
+          <p>
+            Once the 3D design is approved, we prepare accurate 2D architectural drawings and—when needed—engineered documents for permits, HOA submissions, or structural verification.
+          </p>
+          <p>
+            This includes site plans, elevations, drainage routing, and installation specifications.
+          </p>
         </div>
 
-        <!-- 5 STEP PROCESS -->
-        <div class="accordion-item">
-          <button class="accordion-header" type="button">
-            <span class="label">Our 5-step design–build process</span>
-            <span class="icon">›</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <p><strong>1️⃣ Discovery</strong></p>
-              <p>
-                We review your property, inspiration, and functional goals. In Lake Havasu City, this
-                includes elevation checks, sun exposure, wind direction, and slope analysis.
-              </p>
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3>Detailed Proposal & Scope Agreement</h3>
+          <p>
+            We provide a detailed proposal that includes exact materials, installation methods, and project scope. There are no vague placeholders or "we'll decide later" clauses.
+          </p>
+          <p>
+            You know precisely what you're approving before construction begins.
+          </p>
+        </div>
 
-              <p><strong>2️⃣ 3D Concept Design</strong></p>
-              <p>
-                We build a photo-realistic model showing the proposed layout, shade structures,
-                materials, lighting, and site-specific details.
-              </p>
+        <div class="process-step">
+          <div class="process-number">5</div>
+          <h3>Design–Build Management</h3>
+          <p>
+            We coordinate all aspects of the build—materials, scheduling, inspections, and subcontractor coordination. Communication stays open, timelines remain realistic, and unexpected issues are addressed immediately.
+          </p>
+        </div>
 
-              <p><strong>3️⃣ Investment Alignment</strong></p>
-              <p>We match the design to your budget using a detailed scope—no vague allowances, no surprises.</p>
-
-              <p><strong>4️⃣ Architectural Plans</strong></p>
-              <p>We create 2D drawings used for construction and permitting.</p>
-
-              <p><strong>5️⃣ Build Management</strong></p>
-              <p>
-                We oversee layout, structure, drainage, lighting, and finishing so the final result matches
-                the approved design.
-              </p>
-            </div>
-          </div>
+        <div class="process-step">
+          <div class="process-number">6</div>
+          <h3>Final Walkthrough & Handoff</h3>
+          <p>
+            When the project is complete, we walk through the space with you to confirm that every detail matches the approved design and that all structural, drainage, and installation work meets our standards.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- GALLERY -->
     <section>
-      <h2 class="section-title">Representative projects</h2>
+      <h2 class="section-title">3D renders and completed projects</h2>
       <p class="section-subtitle">
-        Below are sample 3D renderings and completed outdoor spaces that reflect the level of detail and
-        quality we bring to Lake Havasu City–area projects.
+        High-fidelity renderings show clients exactly what their outdoor space will look like before construction begins.
       </p>
 
-      <div class="project-gallery">
-        <div class="project-thumb">
+      <div class="gallery-grid">
+        <div>
           <picture>
-            <source srcset="/projects/1200dpi/img1/002.jpg" media="(min-width: 900px)">
-            <img loading="lazy" src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola">
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img1/021.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img1/021.jpg" alt="3D rendering of a pool-centered backyard landscape design">
           </picture>
-          <div>Modern desert outdoor living concept with pool, fire feature, and pergola.</div>
+          <div>Pool-centric backyard design with engineered hardscape layout.</div>
         </div>
-
-        <div class="project-thumb">
+        <div>
           <picture>
-            <source srcset="/projects/1200dpi/img4/001.jpg" media="(min-width: 900px)">
-            <img loading="lazy" src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing">
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img2/010.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img2/010.jpg" alt="3D outdoor living space with pergola and seating areas">
           </picture>
-          <div>Outdoor living concept featuring structured layout and clean architectural detailing.</div>
+          <div>Outdoor living space with shade structure and graded seating areas.</div>
         </div>
-
-        <div class="project-thumb">
+        <div>
           <picture>
-            <source srcset="/projects/1200dpi/img3/001.jpg" media="(min-width: 900px)">
-            <img loading="lazy" src="/projects/600dpi/img3/001.jpg" alt="3D rendering of a complete backyard transformation">
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img1/003.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img1/003.jpg" alt="3D landscape design showing hardscape and decorative rock">
+          </picture>
+          <div>Hardscape and decorative rock design with integrated drainage planning.</div>
+        </div>
+        <div>
+          <picture>
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img2/003.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img2/003.jpg" alt="3D render of a flagstone patio with desert landscaping">
+          </picture>
+          <div>Flagstone patio design with natural desert landscaping integration.</div>
+        </div>
+        <div>
+          <picture>
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img1/004.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img1/004.jpg" alt="3D rendering of an outdoor kitchen and entertainment area">
+          </picture>
+          <div>Outdoor kitchen and entertainment area with wind-rated pergola.</div>
+        </div>
+        <div>
+          <picture>
+            <source media="(max-width: 768px)" srcset="/projects/600dpi/img3/001.jpg">
+            <img loading="lazy" src="/projects/1200dpi/img3/001.jpg" alt="3D rendering of a complete backyard transformation">
           </picture>
           <div>3D render previewing a full backyard transformation.</div>
         </div>
@@ -395,8 +375,7 @@
     <section>
       <h2 class="section-title">Lake Havasu City project FAQ</h2>
       <p class="section-subtitle">
-        Common questions we hear from Lake Havasu homeowners about cost, drainage, hillside lots,
-        and structures that withstand extreme desert winds.
+        Common questions we hear from Lake Havasu homeowners about cost, drainage, hillside lots, and structures that withstand extreme desert winds.
       </p>
 
       <div class="faq-list">
@@ -408,16 +387,13 @@
           <div class="faq-content">
             <div class="faq-inner">
               <p>
-                We don’t provide vague price ranges—we prepare a detailed proposal based entirely on
-                your approved 3D concept and the architectural plans that follow.
+                We don't provide vague price ranges—we prepare a detailed proposal based entirely on your approved 3D concept and the architectural plans that follow.
               </p>
               <p>
-                Every proposal includes exact scope, materials, and installation methods so you know
-                precisely what you’re getting. No surprises, no gray areas.
+                Every proposal includes exact scope, materials, and installation methods so you know precisely what you're getting. No surprises, no gray areas.
               </p>
               <p>
-                If you want to adjust scope, features, or materials, we can revise the proposal and
-                explain how changes affect cost and aesthetics.
+                If you want to adjust scope, features, or materials, we can revise the proposal and explain how changes affect cost and aesthetics.
               </p>
             </div>
           </div>
@@ -432,8 +408,7 @@
             <div class="faq-inner">
               <p>Weather—especially wind—is the biggest variable for outdoor construction in Lake Havasu City.</p>
               <p>
-                Extreme heat can also affect scheduling during the summer, and hillside properties often
-                require additional time for excavation, leveling, drainage routing, or footing installation.
+                Extreme heat can also affect scheduling during the summer, and hillside properties often require additional time for excavation, leveling, drainage routing, or footing installation.
               </p>
               <p>We provide realistic timelines and keep communication open during weather delays.</p>
             </div>
@@ -448,9 +423,7 @@
           <div class="faq-content">
             <div class="faq-inner">
               <p>
-                Yes. Lake Havasu City is one of our primary western Arizona markets. We design and manage
-                projects across the city—including hillside communities, lake-view properties, and
-                master-planned neighborhoods.
+                Yes. Lake Havasu City is one of our primary western Arizona markets. We design and manage projects across the city—including hillside communities, lake-view properties, and master-planned neighborhoods.
               </p>
             </div>
           </div>
@@ -465,9 +438,7 @@
             <div class="faq-inner">
               <p>Absolutely. Pool-centric backyards are one of the most common project types in Lake Havasu City.</p>
               <p>
-                Depending on the neighborhood and the scale of the project, some pool builds require
-                engineered drawings, electrical documentation, and site plans. We can prepare these documents
-                when needed.
+                Depending on the neighborhood and the scale of the project, some pool builds require engineered drawings, electrical documentation, and site plans. We can prepare these documents when needed.
               </p>
             </div>
           </div>
@@ -481,16 +452,13 @@
           <div class="faq-content">
             <div class="faq-inner">
               <p>
-                Often, yes. Many drainage issues stem from poor grading, insufficient slope, trapped
-                low points behind retaining walls, or runoff from uphill properties.
+                Often, yes. Many drainage issues stem from poor grading, insufficient slope, trapped low points behind retaining walls, or runoff from uphill properties.
               </p>
               <p>
-                If the issue can be solved with grading adjustments, swales, drains, or elevation planning,
-                we will propose a practical solution.
+                If the issue can be solved with grading adjustments, swales, drains, or elevation planning, we will propose a practical solution.
               </p>
               <p>
-                If the drainage problem is structural or geological in nature, we will be direct about
-                whether it is a project we can safely take on.
+                If the drainage problem is structural or geological in nature, we will be direct about whether it is a project we can safely take on.
               </p>
             </div>
           </div>
@@ -504,12 +472,10 @@
           <div class="faq-content">
             <div class="faq-inner">
               <p>
-                Yes. We select pergola and shade structure models that are appropriate for strong desert winds
-                and install them according to engineered or manufacturer specifications.
+                Yes. We select pergola and shade structure models that are appropriate for strong desert winds and install them according to engineered or manufacturer specifications.
               </p>
               <p>
-                Larger structures, or those placed near property lines, may require permit drawings. We produce
-                these drawings in-house.
+                Larger structures, or those placed near property lines, may require permit drawings. We produce these drawings in-house.
               </p>
             </div>
           </div>
@@ -518,13 +484,14 @@
     </section>
 
     <!-- Service page link: backyard drainage -->
-<section style="margin-top:3rem;">
-  <h2 class="section-title">Backyard drainage solutions in Lake Havasu City</h2>
-  <p class="section-subtitle">
-    <a href="/locations/lake-havasu-city/backyarddrainage/">Backyard drainage and grading for Lake Havasu City, AZ</a>
-  </p>
-</section>
-<section style="margin-top:3rem;">
+    <section style="margin-top:3rem;">
+      <h2 class="section-title">Backyard drainage solutions in Lake Havasu City</h2>
+      <p class="section-subtitle">
+        <a href="/locations/kingman/backyard-drainage/">Backyard drainage and grading for Lake Havasu City, AZ</a>
+      </p>
+    </section>
+
+    <section style="margin-top:3rem;">
       <h2 class="section-title">Nearby Service Areas</h2>
       <p class="section-subtitle">Explore our full service area across western and northern Arizona:</p>
 
@@ -542,41 +509,51 @@
     <section>
       <h2 class="section-title">Ready to explore your Lake Havasu outdoor project?</h2>
       <p class="section-subtitle">
-        Start with a 3D design questionnaire—there’s no obligation, and it helps us prepare realistic
-        recommendations tailored to your property.
+        Start with a 3D design questionnaire—there's no obligation, and it helps us prepare realistic recommendations tailored to your property.
       </p>
       <button class="btn-primary" type="button" onclick="window.location.href='/#questionnaire';">
         Start Your 3D Design Questionnaire
       </button>
     </section>
-
-    <!-- FOOTER -->
-    <!-- Footer: standardized corporate info -->
-<footer>
-  <div>Sanctuary Outdoor – 3D Render &amp; Build Co.</div>
-  <div style="margin-top:0.3rem;">10632 N Scottsdale Rd. #105, Scottsdale, AZ 85254</div>
-  <div style="margin-top:0.3rem;">URL: <a href="https://sanctuaryoutdoor.com/">https://sanctuaryoutdoor.com/</a></div>
-  <div style="margin-top:0.3rem;">Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a></div>
-  <div style="margin-top:0.3rem;">Telephone: <a href="tel:+14809150026">(480) 915-0026</a></div>
-  <div class="footer-actions">
-    <a class="btn-secondary" href="https://sanctuaryoutdoor.com/">Home</a>
-    <a class="btn-primary call-mobile" href="tel:+14809150026">Call</a>
-  </div>
-  <div style="margin-top:0.6rem;">Images are protected &amp; watermarked. Use without permission is prohibited.</div>
-  <div style="margin-top:0.3rem;">© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
-</footer>
   </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>Sanctuary Outdoor — 3D Render &amp; Build Co.</div>
+    <div style="margin-top:0.3rem;">3880 Stockton Hill Rd Ste 103 #270, Kingman, AZ 86409</div>
+    <div style="margin-top:0.3rem;">URL: <a href="https://sanctuaryoutdoor.com/">https://sanctuaryoutdoor.com/</a></div>
+    <div style="margin-top:0.3rem;">Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a></div>
+    <div style="margin-top:0.3rem;">Telephone: <a href="tel:+14809150026">(480) 915-0026</a></div>
+    <div class="footer-actions">
+      <a class="btn-primary call-mobile" href="tel:+14809150026">Call Now</a>
+      <a class="btn-secondary" href="/sanctuary-outdoor.vcf" download>Save Contact</a>
+    </div>
+    <div style="margin-top:0.6rem;">© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
+    <div style="margin-top:0.3rem;">Images are protected &amp; watermarked. Use without permission is prohibited.</div>
+  </footer>
 
   <script>
     // Year in footer
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    // Accordion logic
-
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isOpen = faqItem.classList.contains('open');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('open');
+        });
+        
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+          faqItem.classList.add('open');
+        }
+      });
+    });
   </script>
-
-  <!-- Accordion behavior -->
-  <script src="/assets/js/accordion-one-open.js" defer></script>
 </body>
 </html>
