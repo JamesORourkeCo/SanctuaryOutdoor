@@ -581,39 +581,8 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
-
-  // Accordion functionality
-  document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-      const accordionItem = button.parentElement;
-      const isOpen = accordionItem.classList.contains('open');
-      
-      // Close all accordion items
-      document.querySelectorAll('.accordion-item').forEach(item => {
-        item.classList.remove('open');
-      });
-      
-      // Open clicked item if it wasn't already open
-      if (!isOpen) {
-        accordionItem.classList.add('open');
-      }
-    });
-  });
-
-  // FAQ accordion functionality
-  document.querySelectorAll('.faq-header').forEach(button => {
-    button.addEventListener('click', () => {
-      const faqItem = button.parentElement;
-      const isOpen = faqItem.classList.contains('open');
-      
-      // Close all FAQ items
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('open');
-      });
-      
-      // Open clicked item if it wasn't already open
-      if (!isOpen) {
-        faqItem.classList.add('open');
+  <!-- Accordion behavior -->
+  <script src="/assets/js/accordion-one-open.js"</script>
       }
     });
   });
