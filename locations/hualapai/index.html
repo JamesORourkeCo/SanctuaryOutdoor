@@ -314,15 +314,15 @@
     <!-- Location Images -->
     <section class="location-images" id="gallery">
       <picture>
-        <source media="(max-width: 768px)" srcset="/projects/600dpi/img1/021.jpg">
+        <source media="(max-width: 1081px)" srcset="/projects/600dpi/img1/021.jpg">
         <img src="/projects/1200dpi/img1/021.jpg" alt="Hualapai Mountain landscape design with hillside drainage and outdoor living" fetchpriority="high">
       </picture>
       <picture>
-        <source media="(max-width: 768px)" srcset="/projects/600dpi/img2/001.jpg">
+        <source media="(max-width: 1081px)" srcset="/projects/600dpi/img2/001.jpg">
         <img src="/projects/1200dpi/img2/001.jpg" alt="Hualapai elevation-appropriate landscaping with mountain views" loading="lazy">
       </picture>
       <picture>
-        <source media="(max-width: 768px)" srcset="/projects/600dpi/img3/001.jpg">
+        <source media="(max-width: 1081px)" srcset="/projects/600dpi/img3/001.jpg">
         <img src="/projects/1200dpi/img3/001.jpg" alt="Hualapai hillside property with wind-resilient outdoor structures" loading="lazy">
       </picture>
     </section>
@@ -553,30 +553,16 @@
     </footer>
   </main>
 
-  <!-- Footer year script -->
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+<!-- SCRIPTS -->
+<script>
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+</script>
 
-    // FAQ accordion functionality
-    document.querySelectorAll('.faq-header').forEach(button => {
-      button.addEventListener('click', () => {
-        const faqItem = button.parentElement;
-        const isOpen = faqItem.classList.contains('open');
-        
-        // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('open');
-        });
-        
-        // Open clicked item if it wasn't already open
-        if (!isOpen) {
-          faqItem.classList.add('open');
-        }
-      });
-    });
-  </script>
+<!-- Accordion behavior -->
+<script src="/assets/js/accordion-one-open.js"></script>
 </body>
 </html>
