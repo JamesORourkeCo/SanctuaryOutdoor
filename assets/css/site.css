@@ -465,17 +465,42 @@ textarea {
   border-radius: 999px;
 }
 
+/* Base carousel image styles */
 .carousel-image {
   flex: 0 0 auto;
   width: 260px;
   height: auto;
-  max-height: 180px;
   object-fit: cover;
   border-radius: 0.75rem;
   scroll-snap-align: center;
   cursor: pointer;
   position: relative;
   filter: saturate(1.05);
+}
+
+/* Aspect ratio variants for CLS prevention */
+.carousel-image.portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.carousel-image.landscape-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.carousel-image.landscape-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+.carousel-image.landscape-2-1 {
+  aspect-ratio: 2 / 1;
+}
+
+.carousel-image.landscape-20-11 {
+  aspect-ratio: 20 / 11;
+}
+
+.carousel-image.square {
+  aspect-ratio: 1 / 1;
 }
 
 .carousel-arrow {
@@ -514,7 +539,6 @@ textarea {
   }
   .carousel-image {
     width: 220px;
-    max-height: 150px;
   }
 }
 
