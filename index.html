@@ -16,8 +16,9 @@
   <meta property="og:description" content="3D render–first landscape design and outdoor living spaces with clear pricing before you commit. Serving Kingman and surrounding northwest Arizona communities including Golden Valley, Bullhead City, Fort Mohave, Hualapai & Lake Havasu City, AZ." />
   <meta property="og:url" content="https://sanctuaryoutdoor.com/" />
   <meta property="og:site_name" content="Sanctuary Outdoor" />
-  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/1200dpi/img1/002.jpg" />
-  <meta property="og:image" content="https://sanctuaryoutdoor.com/projects/600dpi/img1/002.jpg" />
+<meta property="og:image" content="https://sanctuaryoutdoor.com/projects/1200dpi/img1/002.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="800" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -95,7 +96,12 @@
     "opens": "08:00",
     "closes": "18:00"
   },
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  }
 }
   </script>
 
@@ -166,11 +172,122 @@
     }
   </style>
 
+<!-- Preconnect to external resources -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://www.google.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- reCAPTCHA with explicit render callback -->
   <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+
+<!-- Add this after your existing schema blocks, before </head> -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "datePublished": "2025-08-15",
+  "itemReviewed": {
+    "@id": "https://sanctuaryoutdoor.com/#business"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Mrs. S"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "My number one item was to see what type of design and illustration Jim could produce with my verbal instructions of what I wanted. I was not disappointed. He came up with a beautiful design. Jim was very professional. He notified me at every step and checked at the end of each day to see if I wanted to make any changes. I was also shown examples of product that I could choose from. In the end, Jim installed a drain so my yard drained properly. He also put in flagstone, a drip irrigation system, a walkway, gravel, a flowerbed, a future tree area, gravel on both sides of my house and two awesome pergolas."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "datePublished": "2026-01-21",
+  "itemReviewed": {
+    "@id": "https://sanctuaryoutdoor.com/#business"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Charlie and Jane"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "You really need to hire this man. The work he does is beautiful and very well priced. The dogs love it also."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "datePublished": "2025-12-20",
+  "itemReviewed": {
+    "@id": "https://sanctuaryoutdoor.com/#business"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Sanctuary Outdoor Team Member"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "I'm one of the workers. The experience I've had with these projects has taught me a lot. I'm thankful Jim took a chance with me and employed me. I am looking forward to doing more projects and helping this business grow. Thank you so much."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas does Sanctuary Outdoor serve in Arizona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanctuary Outdoor serves Kingman and surrounding northwest Arizona communities including Golden Valley, Bullhead City, Fort Mohave, Hualapai, and Lake Havasu City."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in a 3D landscape design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our 3D concept designs include photo-realistic renders that let you visualize your future outdoor space before construction begins, showing every detail including lighting, textures, materials, and complete layout with transparent pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical budget range for landscape projects in Kingman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sanctuary Outdoor handles projects ranging from $10,000 to over $100,000, with custom pricing based on your specific needs including pools, hardscaping, drainage systems, irrigation, and outdoor living features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a landscape design and build project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines vary based on scope and complexity. We provide detailed timelines during the design phase and work with you to accommodate phased approaches or specific deadline requirements."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
   <header>
@@ -198,7 +315,7 @@
     <section class="hero">
       <div>
         <div class="hero-highlight">3D render–first landscape design & build</div>
-        <h1>Custom outdoor sanctuaries in Kingman and northwest Arizona with crystal-clear pricing before you commit.</h1>
+        <h1>3D Landscape Design & Build in Kingman | Custom Outdoor Sanctuaries with Clear Pricing</h1>
         <p>
           We design and build tailored outdoor spaces using high-fidelity 3D renders so you can see
           every line, light, and texture — and know the investment — before construction begins.
@@ -473,7 +590,7 @@
 
             <picture>
               <source srcset="/projects/1200dpi/img1/002.jpg" media="(min-width: 1081px)">
-              <img loading="lazy" src="/projects/600dpi/img1/002.jpg" alt="3D landscape render - pool-centric desert yard view 1" class="carousel-image landscape-3-2" data-index="0" />
+              <img   fetchpriority="high" loading="eager" src="/projects/600dpi/img1/002.jpg" alt="3D landscape render - pool-centric desert yard view 1" class="carousel-image landscape-3-2" data-index="0" />
             </picture>
 
             <picture>
