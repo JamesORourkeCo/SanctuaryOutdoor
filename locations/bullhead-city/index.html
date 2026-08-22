@@ -163,6 +163,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Do you work with our HOA in Bullhead City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+      "text": "We work directly with HOAMCO and other HOAs to get your design preapproved. HOAs appreciate our dimensional drawings, scale drawings, and renders along with our detailed descriptions. Let us take the stress out of your home's outdoor transformation."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How much will my project cost in Bullhead City?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -213,6 +221,22 @@
 }
 </script>
 
+<!-- Review Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@id": "https://sanctuaryoutdoor.com/#business"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Albertus"
+  },
+  "reviewBody": "Mr Jim O'Rourke is a fantastic landscaping guru. He made my home's landscaping look terrific. (I'm only a little worried that my neighbors will be jealous) His design ideas were stupendous. He had a remarkable computerized system to show me the way my landscaping would look after he completed the job. By golly, it looked even better than his generated photos. I can't say enough good to describe this wonderful man's work ethic, dedication and knowledge. Not only that he was pleasant to a fault and easy to work and plan with. I can only recommend Jim O'Rourke if you truly want the best in all aspects for your landscaping and irrigation projects. He has integrity in spades. Jim even helped me get approvals from my HOA! He went with me to face the music. The HOA was impressed by his work ethics and results. I think anyone would like Jim O'Rourke to do their landscaping."
+}
+</script>
+
 <!-- ============================
           PAGE STYLES
 ============================== -->
@@ -231,7 +255,7 @@
 <a href="/#services">Services</a>
 <a href="https://sanctuaryoutdoor.com/#questionnaire">Questionnaire</a>
 <a href="#gallery">Gallery</a>
-<a href="https://sanctuaryoutdoor.com/reviews">Reviews</a>
+<a href="#reviews">Reviews</a>
 <a href="#service-areas">Service Areas</a>
 <a class="btn-primary" href="https://sanctuaryoutdoor.com/#questionnaire">Start Your Design Brief</a>
 </nav>
@@ -285,6 +309,7 @@
 <li>Pergolas and structures designed for local winds and sudden storms</li>
 <li>Architectural 2D drawings for pricing, layout, and coordination</li>
 <li>One team to carry the design vision through to the final build</li>
+<li>Our team works with HOAMCO and other HOAs to get your design vision approved</li>
 </ul>
 </div>
 <div class="highlight-card">
@@ -375,44 +400,70 @@
 
 <!-- FEATURED PROJECTS -->
 <section id="gallery">
-<h2 class="section-title">Representative projects</h2>
-<p class="section-subtitle">
-  Below are sample 3D renderings and completed outdoor spaces that reflect the level of detail and
-  quality we bring to Bullhead City–area projects.
-</p>
-<div class="project-gallery">
-<div class="project-thumb">
-<picture>
-<source media="(min-width: 1081px)" srcset="/projects/1200dpi/img1/002.jpg"/>
-<img src="/projects/600dpi/img1/002.jpg" alt="Modern desert outdoor living concept with pool and pergola in Bullhead City" class="landscape-3-2" fetchpriority="high" loading="eager"/>
-</picture>
-<div>Modern desert outdoor living concept with pool, fire feature, and pergola.</div>
-</div>
-<div class="project-thumb">
-<picture>
-<source media="(min-width: 1081px)" srcset="/projects/1200dpi/img4/001.jpg"/>
-<img src="/projects/600dpi/img4/001.jpg" alt="Outdoor living layout featuring clean architectural detailing in northwest Arizona" class="landscape-3-2" loading="lazy"/>
-</picture>
-<div>Outdoor living concept featuring structured layout and clean architectural detailing.</div>
-</div>
-<div class="project-thumb">
-<picture>
-<source media="(min-width: 1081px)" srcset="/projects/1200dpi/img3/001.jpg"/>
-<img src="/projects/600dpi/img3/001.jpg" alt="3D rendering preview of a complete backyard transformation in Bullhead City" class="square" loading="lazy"/>
-</picture>
-<div>3D render previewing a full backyard transformation.</div>
-</div>
-</div>
+  <h2 class="section-title">Representative projects</h2>
+  <p class="section-subtitle">
+    Below are sample 3D renderings and completed outdoor spaces that reflect the level of detail and
+    quality we bring to Bullhead City–area projects.
+  </p>
+  <div class="project-gallery">
+    <div class="carousel" data-project="img10">
+      <button class="carousel-arrow carousel-arrow-left" type="button" data-direction="prev" aria-label="Previous image">
+        ‹
+      </button>
+      <div class="carousel-track" data-project="img10">
+
+        <picture>
+          <source srcset="/projects/1200dpi/img10/001.jpg" media="(min-width: 1081px)">
+          <img loading="eager" fetchpriority="high" src="/projects/600dpi/img10/001.jpg" alt="Modern desert outdoor and very Southwest front yard in Bullhead City" class="carousel-image landscape-3-2" data-index="0" />
+        </picture>
+
+        <picture>
+          <source srcset="/projects/1200dpi/img10/002.jpg" media="(min-width: 1081px)">
+          <img loading="lazy" src="/projects/600dpi/img10/002.jpg" alt="Outdoor living layout featuring clean architectural detailing in northwest Arizona" class="carousel-image landscape-3-2" data-index="1" />
+        </picture>
+
+        <picture>
+          <source srcset="/projects/1200dpi/img10/008.jpg" media="(min-width: 1081px)">
+          <img loading="lazy" src="/projects/600dpi/img10/008.jpg" alt="Southwest Modern entry way in Bullhead City" class="carousel-image portrait" data-index="2" />
+        </picture>
+
+      </div>
+      <button class="carousel-arrow carousel-arrow-right" type="button" data-direction="next" aria-label="Next image">
+        ›
+      </button>
+    </div>
+  </div>
 </section>
 
 <!-- BULLHEAD CITY FAQ -->
-<section id="reviews">
+<section id="faq">
 <h2 class="section-title">Bullhead City project FAQ</h2>
 <p class="section-subtitle">
   Common questions we hear from Bullhead City homeowners about cost, drainage, and structures that
   stand up to local weather.
 </p>
 <div class="faq-list">
+<!-- HOA -->
+<div class="faq-item">
+<button class="faq-header" type="button">
+<span>Do you work with our HOA in Bullhead City?</span>
+<span class="icon">›</span>
+</button>
+<div class="faq-content">
+<div class="faq-inner">
+<p>
+  We work directly with HOAMCO and other HOAs to get your design preapproved.  
+</p>
+<p>
+  HOAs appreciate our dimensional drawings, scale drawings, and renders along with our detailed descriptions.
+</p>
+<p>
+  Let us take the stress out of your home's outdoor transformation.
+</p>
+</div>
+</div>
+</div>
+
 <!-- Cost -->
 <div class="faq-item">
 <button class="faq-header" type="button">
@@ -525,11 +576,24 @@
 </div>
 </section>
 
+<!-- Review -->
+    <section id="reviews" style="margin-top:3rem;">
+      <h2 class="section-title">What a Client Says</h2>
+      <div class="card">
+        <p style="margin:0;">
+          Mr Jim O'Rourke is a fantastic landscaping guru. He made my home's landscaping look terrific. (I'm only a little worried that my neighbors will be jealous) His design ideas were stupendous. He had a remarkable computerized system to show me the way my landscaping would look after he completed the job. By golly, it looked even better than his generated photos. I can't say enough good to describe this wonderful man's work ethic, dedication and knowledge. Not only that he was pleasant to a fault and easy to work and plan with. I can only recommend Jim O'Rourke if you truly want the best in all aspects for your landscaping and irrigation projects. He has integrity in spades. Jim even helped me get approvals from my HOA! He went with me to face the music. The HOA was impressed by his work ethics and results. I think anyone would like Jim O'Rourke to do their landscaping.
+        </p>
+        <p style="margin-top:0.8rem; font-size:0.85rem; color:#6b7280;">
+          — Albertus
+        </p>
+      </div>
+    </section>
+
 <!-- Service page link: backyard drainage -->
 <section style="margin-top:3rem;">
-  <h2 class="section-title">Backyard drainage solutions in Kingman</h2>
+  <h2 class="section-title">Backyard drainage solutions in Bullhead City</h2>
   <p class="section-subtitle">
-    <a href="/locations/kingman/backyard-drainage/">Backyard drainage and grading in Kingman, AZ</a>
+    <a href="/locations/kingman/backyard-drainage/">Backyard drainage and grading in Bullhead City, AZ</a>
   </p>
 </section>
 
@@ -560,16 +624,17 @@
 
 <!-- FOOTER -->
 <footer>
-  <div>Sanctuary Outdoor – 3D Render & Build Co.</div>
+  <p class="small-note"><a href="https://sanctuaryoutdoor.com/locations/kingman/">Kingman Landscape Services</a></p>
+  <div>Sanctuary Outdoor – 3D Render &amp; Build Co.</div>
   <div style="margin-top:0.3rem;">3880 Stockton Hill Rd Ste 103 #270, Kingman, AZ 86409</div>
   <div style="margin-top:0.3rem;">URL: <a href="https://sanctuaryoutdoor.com/">https://sanctuaryoutdoor.com/</a></div>
   <div style="margin-top:0.3rem;">Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a></div>
   <div style="margin-top:0.3rem;">Telephone: <a href="tel:+14809150026">(480) 915-0026</a></div>
   <div class="footer-actions">
     <a class="btn-primary call-mobile" href="tel:+14809150026">Call Now</a>
-    <a class="btn-secondary call-mobile" href="/assets/sanctuary-outdoor.vcf">Save Contact</a>
+    <a class="btn-secondary call-mobile" href="/assets/sanctuary-outdoor.vcf" download>Save Contact</a>
   </div>
-  <div style="margin-top:0.6rem;">Images are protected & watermarked. Use without permission is prohibited.</div>
+  <div style="margin-top:0.6rem;">Images are protected &amp; watermarked. Use without permission is prohibited.</div>
   <div style="margin-top:0.3rem;">© <span id="year"></span> Sanctuary Outdoor. All rights reserved.</div>
 </footer>
 </main>
@@ -584,6 +649,18 @@
 </script>
 
 <!-- Accordion behavior -->
+<script src="/assets/js/carousel-lightbox.js"></script>
 <script src="/assets/js/accordion-one-open.js"></script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true">
+    <button class="lightbox-close" type="button" aria-label="Close" data-lightbox-close>×</button>
+    <div class="lightbox-image-wrap">
+      <button class="lightbox-nav lightbox-nav-left" type="button" aria-label="Previous" data-lightbox-prev>‹</button>
+      <img id="lightboxImg" src="" alt="Project image" />
+      <button class="lightbox-nav lightbox-nav-right" type="button" aria-label="Next" data-lightbox-next>›</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
