@@ -175,8 +175,7 @@
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <!-- reCAPTCHA with explicit render callback -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+  <!-- reCAPTCHA is loaded after the form script so the callback and DOM both exist before it runs. -->
 
 <!-- Add this after your existing schema blocks, before </head> -->
 <script type="application/ld+json">
@@ -533,6 +532,9 @@
             </div>
             <div class="option-tile" data-field="interests" data-value="grading-drainage-pitch-to-sump">
               Grading and drainage (correct pitch to sump pumps and drain pipe)
+            </div>
+            <div class="option-tile" data-field="interests" data-value="Standing water">
+              Standing water
             </div>
           </div>
         </div>
@@ -1408,7 +1410,7 @@
   <div>Sanctuary Outdoor – 3D Render &amp; Build Co.</div>
   <div style="margin-top:0.3rem;">3880 Stockton Hill Rd Ste 103 #270, Kingman, AZ 86409</div>
   <div style="margin-top:0.3rem;">URL: <a href="https://sanctuaryoutdoor.com/">https://sanctuaryoutdoor.com/</a></div>
-  <div style="margin-top:0.3rem;">Email: <a href="mailto:Jim@SanctuaryOutdoor.com">Jim@SanctuaryOutdoor.com</a></div>
+  <div style="margin-top:0.3rem;">Email: <a href="mailto:jim@sanctuaryoutdoor.com">jim@sanctuaryoutdoor.com</a></div>
   <div style="margin-top:0.3rem;">Telephone: <a href="tel:+14809150026">(480) 915-0026</a></div>
   <div class="footer-actions">
     <a class="btn-primary call-mobile" href="tel:+14809150026">Call Now</a>
@@ -1520,7 +1522,8 @@
         responseMethods: responseMethods,
         overallFeel: overallFeel,
         interests: interests,
-        features: features
+        features: features,
+        to_email: "james.orourkeaz@gmail.com"
       };
 
       return { templateParams, responseInputs, feelTiles, interestTiles, featureTiles };
@@ -1635,6 +1638,9 @@
 
 
   </script>
+
+  <!-- reCAPTCHA loader: placed here intentionally to avoid callback/DOM race conditions -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 
   <!-- SCRIPT BLOCK 2: Carousel + Lightbox -->
   <script src="/assets/js/carousel-lightbox.js"></script>
