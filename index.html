@@ -1259,10 +1259,6 @@
               Your review will not appear instantly. We review each submission manually before adding it to this page.
             </p>
 
-            <!-- reCAPTCHA container -->
-            <div style="margin-top:1rem;">
-              <div id="reviewCaptcha"></div>
-            </div>
           </form>
         </div>
       </div>
@@ -1410,7 +1406,7 @@
   <div>Sanctuary Outdoor – 3D Render &amp; Build Co.</div>
   <div style="margin-top:0.3rem;">3880 Stockton Hill Rd Ste 103 #270, Kingman, AZ 86409</div>
   <div style="margin-top:0.3rem;">URL: <a href="https://sanctuaryoutdoor.com/">https://sanctuaryoutdoor.com/</a></div>
-  <div style="margin-top:0.3rem;">Email: <a href="mailto:jim@sanctuaryoutdoor.com">jim@sanctuaryoutdoor.com</a></div>
+  <div style="margin-top:0.3rem;">Email: <a href="mailto:james.orourkeaz@gmail.com">jim@sanctuaryoutdoor.com</a></div>
   <div style="margin-top:0.3rem;">Telephone: <a href="tel:+14809150026">(480) 915-0026</a></div>
   <div class="footer-actions">
     <a class="btn-primary call-mobile" href="tel:+14809150026">Call Now</a>
@@ -1604,11 +1600,6 @@
           return; // bot
         }
 
-        if (!isHuman(reviewCaptchaWidget)) {
-          alert("Please verify that you are not a robot.");
-          return;
-        }
-
         const templateParams = {
           reviewName: reviewForm.reviewName.value,
           reviewBody: reviewForm.reviewBody.value,
@@ -1619,9 +1610,6 @@
           .then(() => {
             alert("Thank you! Your review has been submitted.");
             reviewForm.reset();
-            if (typeof grecaptcha !== "undefined" && reviewCaptchaWidget !== null) {
-              grecaptcha.reset(reviewCaptchaWidget);
-            }
           })
           .catch((error) => {
             console.error("Review EmailJS error:", error);
