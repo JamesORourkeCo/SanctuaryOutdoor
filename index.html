@@ -8,7 +8,7 @@
   <meta name="google-site-verification" content="r3Y-0p-bv9Sd8RVP2cKfBOiVcetEQyfrNFFKK64vwEA" />
 
   <!-- SEO CORE -->
-  <meta name="description" content="3D landscape design and build in Kingman and northwest Arizona. See your yard in photo-real 3D with clear pricing before construction begins." />
+  <meta name="description" content="3D landscape design and build in Kingman and northwest Arizona. See your yard in photo-real 3D with clear pricing before construction begins. Click to text a real human or call and speak with a real person." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://sanctuaryoutdoor.com/" />
 
@@ -175,7 +175,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
   <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- reCAPTCHA is loaded after the form script so the callback and DOM both exist before it runs. -->
 
@@ -352,7 +352,12 @@
 <a class="btn-primary" href="https://sanctuaryoutdoor.com/#questionnaire">Start Your Design Brief</a>
 </nav>
     </div>
-  </header>
+  
+    <div class="quick-contact-actions" style="max-width:1100px;margin:0 auto;padding:0 1.25rem 0.75rem;display:flex;flex-wrap:wrap;gap:0.65rem;align-items:center;">
+      <a class="btn-primary" style="text-decoration:none;display:inline-block;" href="sms:+14808198565" aria-label="Text Sanctuary Outdoor at 480-819-8565">Click to Text a Real Human</a>
+      <a class="btn-secondary" href="tel:+14808198565" aria-label="Call Sanctuary Outdoor at 480-819-8565">Click to Call</a>
+    </div>
+</header>
 
   <main>
     <!-- HERO -->
@@ -1256,7 +1261,10 @@
             <div class="field">
               <input type="email" name="reviewEmail" placeholder="Email (not displayed publicly)" required />
             </div>
-            <button type="submit" class="btn-primary">Submit Review for Approval</button>
+            <div style="margin-top:1rem;">
+              <div id="reviewCaptcha"></div>
+            </div>
+            <button id="reviewSubmitButton" type="submit" class="btn-primary" disabled>Submit Review for Approval</button>
             <p style="font-size:0.78rem;color:#9ca3af;margin-top:0.5rem;">
               Your review will not appear instantly. We review each submission manually before adding it to this page.
             </p>
@@ -1419,36 +1427,80 @@
 </footer>
 
   <!-- SCRIPT BLOCK 1: EmailJS + Forms + reCAPTCHA -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // reCAPTCHA initialization
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
+    // reCAPTCHA initialization. Explicit, idempotent rendering prevents timing/order races.
     let questionnaireCaptchaWidget = null;
     let reviewCaptchaWidget = null;
 
-    function onRecaptchaLoad() {
-      if (typeof grecaptcha !== "undefined") {
-        const qCaptcha = document.getElementById("questionnaireCaptcha");
-        const rCaptcha = document.getElementById("reviewCaptcha");
-        
-        if (qCaptcha) {
-          questionnaireCaptchaWidget = grecaptcha.render("questionnaireCaptcha", {
+    function renderRecaptchas() {
+      if (typeof grecaptcha === "undefined" || typeof grecaptcha.render !== "function") {
+        return false;
+      }
+
+      const qCaptcha = document.getElementById("questionnaireCaptcha");
+      const rCaptcha = document.getElementById("reviewCaptcha");
+
+      if (qCaptcha && questionnaireCaptchaWidget === null) {
+        try {
+          questionnaireCaptchaWidget = grecaptcha.render(qCaptcha, {
             sitekey: "6LcRhCEsAAAAAKrH9SWKoEIOAcp2cEE69iJ6HDDY"
           });
-        }
-        
-        if (rCaptcha) {
-          reviewCaptchaWidget = grecaptcha.render("reviewCaptcha", {
-            sitekey: "6LcRhCEsAAAAAKrH9SWKoEIOAcp2cEE69iJ6HDDY"
-          });
+        } catch (error) {
+          console.error("Questionnaire reCAPTCHA render error:", error);
         }
       }
+
+      if (rCaptcha && reviewCaptchaWidget === null) {
+        try {
+          reviewCaptchaWidget = grecaptcha.render(rCaptcha, {
+            sitekey: "6LcRhCEsAAAAAKrH9SWKoEIOAcp2cEE69iJ6HDDY",
+            callback: function() {
+              const button = document.getElementById("reviewSubmitButton");
+              if (button) button.disabled = false;
+            },
+            "expired-callback": function() {
+              const button = document.getElementById("reviewSubmitButton");
+              if (button) button.disabled = true;
+            },
+            "error-callback": function() {
+              const button = document.getElementById("reviewSubmitButton");
+              if (button) button.disabled = true;
+            }
+          });
+        } catch (error) {
+          console.error("Review reCAPTCHA render error:", error);
+        }
+      }
+
+      const questionnaireReady = !qCaptcha || questionnaireCaptchaWidget !== null;
+      const reviewReady = !rCaptcha || reviewCaptchaWidget !== null;
+      return questionnaireReady && reviewReady;
+    }
+
+    function onRecaptchaLoad() {
+      renderRecaptchas();
+    }
+
+    // The Google callback is primary. These are harmless idempotent fallbacks if browser/script timing differs.
+    document.addEventListener("DOMContentLoaded", renderRecaptchas);
+    window.addEventListener("load", renderRecaptchas);
+    let recaptchaInitAttempts = 0;
+    const recaptchaInitTimer = window.setInterval(function() {
+      recaptchaInitAttempts++;
+      if (renderRecaptchas() || recaptchaInitAttempts >= 40) {
+        window.clearInterval(recaptchaInitTimer);
+      }
+    }, 250);
+
+    function getCaptchaResponse(widgetId) {
+      if (typeof grecaptcha === "undefined" || widgetId === null) {
+        return "";
+      }
+      return grecaptcha.getResponse(widgetId) || "";
     }
 
     function isHuman(widgetId) {
-      if (typeof grecaptcha === "undefined" || widgetId === null) {
-        return false;
-      }
-      const response = grecaptcha.getResponse(widgetId);
-      return response.length > 0;
+      return getCaptchaResponse(widgetId).length > 0;
     }
 
     // EmailJS initialization
@@ -1536,12 +1588,14 @@
             return; // bot
           }
 
-          if (!isHuman(questionnaireCaptchaWidget)) {
+          const questionnaireCaptchaResponse = getCaptchaResponse(questionnaireCaptchaWidget);
+          if (!questionnaireCaptchaResponse) {
             alert("Please verify that you are not a robot.");
             return;
           }
 
           const { templateParams } = collectQuestionnaireValues();
+          templateParams["g-recaptcha-response"] = questionnaireCaptchaResponse;
 
           // Required contact validation for questionnaire submissions.
           if (!templateParams.responseMethods) {
@@ -1571,7 +1625,10 @@
             })
             .catch((error) => {
               console.error("Questionnaire EmailJS error:", error);
-              alert("There was a problem submitting your questionnaire. Please try again.");
+              if (typeof grecaptcha !== "undefined" && questionnaireCaptchaWidget !== null) {
+                grecaptcha.reset(questionnaireCaptchaWidget);
+              }
+              alert("There was a problem submitting your questionnaire. Please verify the CAPTCHA again and retry.");
             });
 
           return;
@@ -1602,20 +1659,37 @@
           return; // bot
         }
 
+        renderRecaptchas();
+        const reviewCaptchaResponse = getCaptchaResponse(reviewCaptchaWidget);
+        if (!reviewCaptchaResponse) {
+          alert("Please verify that you are not a robot.");
+          return;
+        }
+
+        const reviewSubmitButton = document.getElementById("reviewSubmitButton");
+        if (reviewSubmitButton) reviewSubmitButton.disabled = true;
+
         const templateParams = {
           reviewName: reviewForm.reviewName.value,
           reviewBody: reviewForm.reviewBody.value,
-          reviewEmail: reviewForm.reviewEmail.value
+          reviewEmail: reviewForm.reviewEmail.value,
+          "g-recaptcha-response": reviewCaptchaResponse
         };
 
         emailjs.send("service_iyzih8l", "template_vprpl8b", templateParams)
           .then(() => {
             alert("Thank you! Your review has been submitted.");
             reviewForm.reset();
+            if (typeof grecaptcha !== "undefined" && reviewCaptchaWidget !== null) {
+              grecaptcha.reset(reviewCaptchaWidget);
+            }
           })
           .catch((error) => {
             console.error("Review EmailJS error:", error);
-            alert("There was a problem submitting your review. Please try again.");
+            if (typeof grecaptcha !== "undefined" && reviewCaptchaWidget !== null) {
+              grecaptcha.reset(reviewCaptchaWidget);
+            }
+            alert("There was a problem submitting your review. Please verify the CAPTCHA again and retry.");
           });
       });
     }
@@ -1630,7 +1704,7 @@
   </script>
 
   <!-- reCAPTCHA loader: placed here intentionally to avoid callback/DOM race conditions -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+  <script data-cfasync="false" src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 
   <!-- SCRIPT BLOCK 2: Carousel + Lightbox -->
   <script src="/assets/js/carousel-lightbox.js"></script>
