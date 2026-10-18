@@ -674,3 +674,19 @@ footer a {
     display: inline-flex;
   }
 }
+
+/* sobottommarginv0001 (2026-10-17, operator: "at the bottom of the pages there is no left margin"). On six pages
+   (home, backyard drainage, bubble irrigation, drip irrigation, greenhouse, sprinkler systems) the Popular Landscape
+   Services, Quick Links and Service Areas sections and the footer come after </main>, so they missed main's margins.
+   This gives them the same width and side margins as main; pages where they sit inside main are not affected. */
+body > section,
+body > footer {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+body > footer {
+  padding-bottom: 3rem;
+}
